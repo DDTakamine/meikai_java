@@ -15,7 +15,7 @@ public class ensyu1_2 {
 	 * @日付 : 2023/04/05
 	 */
 	public static void main(String[] arg) {
-		//文字列の中に改行コード\nを入れ、表示
+		//名前を縦に表示する
 		System.out.println("赤\n嶺\n亮\n介");
 	}
 }
