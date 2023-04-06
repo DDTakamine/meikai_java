@@ -25,11 +25,11 @@ public class ensyu2_4 {
 		//数値入力するように促す
 		System.out.println("整数値：");
 		//入力した値に対して計算できるようにデータを移動
-		int a = stdIn.nextInt();
+		int inputValue = stdIn.nextInt();
 		//10足した値を出力
-		System.out.println("10を加えた値は"+ (a+10) + "です。");
+		System.out.println("10を加えた値は"+ (inputValue+10) + "です。");
 		//10引いた値を出力
-		System.out.println("10を引いた値は"+ (a-10) + "です。");
+		System.out.println("10を引いた値は"+ (inputValue-10) + "です。");
 		
 
 	}
