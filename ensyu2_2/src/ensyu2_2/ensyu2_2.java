@@ -17,16 +17,22 @@ public class ensyu2_2 {
 	 * @日付 : 2023/04/05
 	 */
 	public static void main(String[] args) {
-		//int型の変数を３つ宣言し、整数値を代入
+		//int型firstOperand宣言・初期化
 		int firstOperand = 2;
+		//int型secondOperand宣言・初期化
 		int secondOperand = 18;
+		//int型secondOperand宣言・初期化
 		int thirdOperand = 46;
 		
-		//3つの変数に格納されている値を表示、合計・平均を表示
+		//1つ目の変数を表示
 		System.out.println("firstOperandの値は" + firstOperand + "です。");
+		//2つ目の変数を表示
 		System.out.println("secondOperandの値は" + secondOperand + "です。");
+		//3つ目の変数を表示
 		System.out.println("thirdOperandの値は" + thirdOperand + "です。");
+		//合計を表示
 		System.out.println("合計は" + (firstOperand+secondOperand+thirdOperand) + "です。");
+		//平均を表示
 		System.out.println("平均は" + (firstOperand+secondOperand+thirdOperand)/3 + "です。");
 	}
 
