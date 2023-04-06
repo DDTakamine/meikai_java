@@ -19,11 +19,11 @@ public class ensyu2_8 {
 	 */
 	public static void main(String[] args){
 		//標準入力された数値を格納するためのクラス作成
-		Scanner stdIn = new Scanner(System.in);
+		Scanner standardinputValue = new Scanner(System.in);
 		//整数値の入力を促す
 		System.out.print("整数値：");
 		//基準数値を格納
-		int baseValue = stdIn.nextInt();
+		int baseValue = standardinputValue.nextInt();
 		//乱数を発生させるためのクラスを作成
 		Random rand = new Random();
 		//乱数を格納するため、初期化
