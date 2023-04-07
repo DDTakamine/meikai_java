@@ -1,8 +1,8 @@
 package ensyu3_7;
 import java.util.Scanner;
 /*
- * クラス名:ensyu3_5
- * 概要  :演習3-5
+ * クラス名:ensyu3_7
+ * 概要  :演習3-7
  * 作成者:R.Akamine
  * 作成日:2023/04/07
  */
