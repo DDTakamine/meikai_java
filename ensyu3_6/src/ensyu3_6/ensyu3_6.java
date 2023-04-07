@@ -20,7 +20,7 @@ public class ensyu3_6 {
 	 */
 	public static void main (String[] arg){
 		//標準入力の準備
-		Scanner standarInput = new Scanner(System.in);
+		Scanner standarInput = new Scanner(System.in);  
 		//正の整数入力を促す
 		System.out.print("正の整数値：");
 		//計算するための準備
