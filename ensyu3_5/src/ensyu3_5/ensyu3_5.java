@@ -27,13 +27,13 @@ public class ensyu3_5 {
 		if (inputNumber < 0)
 			//処理を終了させる
 			System.out.println("正でない値が入力されました。");
-		//５で割れたならば
+		//５で割れないならば
 		else if (inputNumber % 5 != 0)
-			//その値は５で割れますと表示
+			//その値は５で割り切れません。と表示
 			System.out.println("その値は５で割り切れません。");
 		//そうでなければ
 		else 
-			//５で割れませんと表示
+			//５で割り切れると表示
 			System.out.println("その値は５で割り切れます。");
 	}
 
