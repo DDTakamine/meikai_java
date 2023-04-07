@@ -28,9 +28,9 @@ public class ensyu2_8 {
 		Random rand = new Random();
 		//乱数を格納するため、初期化
 		int randomValue = 0;
-		//0～11の乱数を作成して、その値から５を引くことで、
+		//0～10の乱数を作成して、その値から５を引くことで、
 		//-5～5の範囲における乱数を発生することとする
-		randomValue = rand.nextInt(12) - 5;
+		randomValue = rand.nextInt(11) - 5;
 		//求めたい整数値を表示
 		System.out.print("その値の±5の乱数を生成しました。\n"+"その値は"+(baseValue+randomValue)+"です。\n");
 	}
