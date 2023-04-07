@@ -18,6 +18,9 @@ public class ensyu3_7 {
 	 * 戻り値:なし  
 	 * 作成日:2023.04.07  
 	 */
+	
+	
+	
 	public static void main (String[] arg){
 		//標準入力の準備
 		Scanner standardInput = new Scanner(System.in);
