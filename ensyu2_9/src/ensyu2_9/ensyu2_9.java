@@ -33,7 +33,7 @@ public class ensyu2_9 {
 		//範囲３での乱数を発生
 		randamValue = rand.nextDouble(2.0);
 		//範囲３で発生させた値を表示
-		System.out.println("範囲３での乱数は"+ (randamValue-2) +"です。");
+		System.out.println("範囲３での乱数は"+ (randamValue-1) +"です。");
 		
 	}
 }
