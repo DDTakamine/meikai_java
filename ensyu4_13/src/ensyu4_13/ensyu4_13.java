@@ -33,9 +33,10 @@ public class ensyu4_13 {
 		//和を行った結果をメモ
 		int resultNumber = 0;
 		//nまで足し算をする
-		for(int i=0;i<integerN;++i) {
+		for(int i=1;i<integerN+1;++i) {
 			//resultNumber にどんどん足していく
 			resultNumber += i;
 		}
+		System.out.print(resultNumber);
 	}
 }
