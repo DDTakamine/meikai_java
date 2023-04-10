@@ -1,8 +1,8 @@
 package ensyu2_10;
 import java.util.Scanner ;
 /*
- * クラス名:ensyu2_9
- * 概要  :演習2-9
+ * クラス名:ensyu2_10
+ * 概要  :演習2-10
  * 作成者:R.Akamine
  * 作成日:2023/04/06
  */
@@ -16,15 +16,15 @@ public class ensyu2_10 {
 	 */
 	public static void main(String[] args) {
 		//苗字・名前を標準入力するためにクラスを作成
-		Scanner standardinputValue = new Scanner(System.in);
+		Scanner standardInputValue = new Scanner(System.in);
 		//苗字の入力を促す
 		System.out.print("姓：");
 		//標準入力から名前を受け取る
-		String firstName = standardinputValue.next();
+		String firstName = standardInputValue.next();
 		//苗字の入力を促す
 		System.out.print("名：");
 		//標準入力から苗字を受け取る
-		String familyName = standardinputValue.next();
+		String familyName = standardInputValue.next();
 		//あいさつを表示する
 		System.out.print("こんにちは"+ familyName + firstName + "さん。");
 	}
