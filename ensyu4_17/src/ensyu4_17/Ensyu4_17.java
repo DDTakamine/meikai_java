@@ -1,10 +1,10 @@
 package ensyu4_17;
 import java.util.Scanner;
 /*
- * クラス名:ensyu4_16
- * 概要  :演習3-16
+ * クラス名:ensyu4_17
+ * 概要  :演習3-17
  * 作成者:R.Akamine
- * 作成日:2023/04/10
+ * 作成日:2023/04/11
  */
 public class Ensyu4_17 {
 	/*
@@ -13,7 +13,7 @@ public class Ensyu4_17 {
 	 * 　　　　約数表示が終えた後に、約数の個数を表示するプログラムの作成
 	 * 引数  :なし
 	 * 戻り値:なし
-	 * 作成日:2023.04.10		
+	 * 作成日:2023.04.11		
 	 */
 	public static void main(String[] args) {
 		//標準入力のための準備
