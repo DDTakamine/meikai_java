@@ -18,13 +18,13 @@ public class Ensyu4_17 {
 	public static void main(String[] args) {
 		//標準入力のための準備
 		Scanner standardInput = new Scanner(System.in);
-		//開始の身長を入力
+		//整数値入力を促す
 		System.out.println("整数値：");
 		//計算できるように処理
 		int inputedValue = standardInput.nextInt();
-		//個数を数える
+		//個数を数える変数
 		int countNumber = 0;
-		//１～入力された値まで１つずつ整数を見ていく
+		//１～(入力された値)まで１つずつ整数を見ていく
 		for(int divisorNumber=1; divisorNumber<=inputedValue; divisorNumber++) {
 			//もし、入力された値÷divisorNumber の余りが０ならば、
 			if(inputedValue % divisorNumber == 0) {
@@ -34,7 +34,8 @@ public class Ensyu4_17 {
 				countNumber += 1;
 			}
 		}
-		System.out.println("約数は"+countNumber+"です。");
+		//数えた個数の表示
+		System.out.println("約数は"+countNumber+"個です。");
 		
 	}
 
