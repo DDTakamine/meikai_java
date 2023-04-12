@@ -29,6 +29,8 @@ class ensyu4_9{
 		//0以下で再入力
 		}while(inputedNumber<=0);
 		//0!は１として考える
+		//入力した値が65より大きくなると０になる
+		//入力した値が25より大きくなると負の数が表記される
 		long resultValue = 1;	
 		//いくつまで数えたかを数える
 		int countNumber = 1;
