@@ -20,7 +20,7 @@ class ensyu4_7{
 		//入力準備
 		Scanner standardInput = new Scanner(System.in);
 		//何個表示するか保存
-		int printedNumber;
+		int printedNumber=0;
 		do {
 			//表示個数入力を促す
 			System.out.print("何個表示しますか：");
