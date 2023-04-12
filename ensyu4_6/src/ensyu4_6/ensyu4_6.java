@@ -20,10 +20,14 @@ class ensyu4_6{
 	public static void main(String[] args){
 		//入力の準備
 		Scanner standardInput = new Scanner(System.in);
-		//数値入力を促す
-		System.out.print("何個*を表示しますか：");
-		//計算できるようにする
-		int asterisknumber = standardInput.nextInt();
+		//＊の個数をメモする変数
+		int asterisknumber;
+		do {
+			//数値入力を促す
+			System.out.print("何個*を表示しますか：");
+			//計算できるようにする
+			asterisknumber = standardInput.nextInt();
+		}while(asterisknumber<0);
 		//＊を何個表示したかをメモする
 		int countValue = 0;
 		//表示したい＊の個数まで表示を繰り返す
