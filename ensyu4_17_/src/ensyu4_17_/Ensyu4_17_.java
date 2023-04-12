@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Ensyu4_17_ {
 	/*
 	 * 関数名：main
-	 * 概要  :１～ｎまでの整数値の２乗値を表示するプログラム
+	 * 概要  :約数の個数
 	 * 引数  :なし
 	 * 戻り値:なし
 	 * 作成日:2023.04.11
