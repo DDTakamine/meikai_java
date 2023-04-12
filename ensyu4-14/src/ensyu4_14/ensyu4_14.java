@@ -22,24 +22,24 @@ public class ensyu4_14 {
 		//標準入力するための準備
 		Scanner standardInput = new Scanner(System.in);
 		//いくつまで和をもとめるか
-		int integerN;
+		int integerNumber;
 		//繰り返し
 		do {
 			//ｎの値を聞く
 			System.out.print("nの値：");
 			//入力された値を計算できるように処理
-			integerN = standardInput.nextInt();
+			integerNumber = standardInput.nextInt();
 		//入力されたｎの値が０以下ならもう一度入力
-		}while(integerN <= 0);
+		}while(integerNumber <= 0);
 		
 		//和を行った結果をメモ
 		int resultNumber = 0;
 		//nまで足し算をする
-		for(int i=1;i<integerN+1;++i) {
+		for(int i=1;i<integerNumber+1;++i) {
 			//数字を先に出力
 			System.out.print(i+" ");
 			//最後の数字以外には＋を表示する
-			if(i!=integerN) {
+			if(i!=integerNumber) {
 				//+を表示
 				System.out.print("+"+" ");
 			}
