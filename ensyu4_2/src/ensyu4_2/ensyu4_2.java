@@ -32,10 +32,13 @@ class ensyu4_2{
 		int guessesNumber;
 		//推測を繰り返す
 		do{
-			//推測を促す
-			System.out.println("いくつかな？");
-			//入力された値を処理できるようにする
-			guessesNumber = standardInput.nextInt();
+			do {
+				//推測を促す
+				System.out.println("いくつかな？");
+				//入力された値を処理できるようにする
+				guessesNumber = standardInput.nextInt();
+			//入力が正しくない場合は再度入力する
+			}while(guessesNumber<10 || guessesNumber<99);
 			//もし、推測した値が正解よりも大きい
 			if(guessesNumber > correctAnswer)
 				//もっと小さな値ですと表示
