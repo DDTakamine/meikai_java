@@ -19,10 +19,14 @@ class ensyu4_9{
 	public static void main(String[] args){
 		//標準入力準備
 		Scanner standardInput = new Scanner(System.in);
-		//計算する値入力を促す
-		System.out.print("nの値：");
-		//入力された値が計算できるようにする
-		int inputedNumber = standardInput.nextInt();
+		//入力する数値を保存
+		int inputedNumber;
+		do {
+			//計算する値入力を促す
+			System.out.print("nの値：");
+			//入力された値が計算できるようにする
+			inputedNumber = standardInput.nextInt();
+		}while(inputedNumber<0);
 		//0!は１として考える
 		long resultValue = 1;	
 		//いくつまで数えたかを数える
