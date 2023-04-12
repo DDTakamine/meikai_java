@@ -1,8 +1,8 @@
 package ensyu4_19;
 import java.util.Scanner;
 /*
- * クラス名:ensyu4_18
- * 概要  :演習4-18
+ * クラス名:ensyu4_19
+ * 概要  :演習4-19
  * 作成者:R.Akamine
  * 作成日:2023/04/11
  */
@@ -21,9 +21,9 @@ public class Ensyu4_19 {
 		//標準入力するための準備
 		Scanner standardInput = new Scanner(System.in);
 		//もう一度季節を聞くための変数
-		int retryValue ;
+		int retryValue=0 ;
 		//何月か入力してもらうための変数
-		int monthValue ;
+		int monthValue=0 ;
 		//好きな回数だけ季節を聞くためのループ
 		do {
 			//入力が正しく行えているか確認のためのループ
@@ -53,7 +53,7 @@ public class Ensyu4_19 {
 				System.out.println("それは冬です。");
 			}
 			//再度、季節を聞くかどうか確認
-			System.out.print("もう一度？　１・・・Yes / 2・・・No");
+			System.out.print("もう一度？　１・・・Yes / 1以外・・・No:");
 			//処理が行えるようにする
 			retryValue = standardInput.nextInt();
 		//もう一度入力したい間
