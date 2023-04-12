@@ -25,7 +25,8 @@ public class Ensyu4_16 {
 			System.out.println("何個＊を表示しますか：");
 			//計算できるように処理
 			astariskValue = standardInput.nextInt();
-		}while(astariskValue<0);
+		//０以下の入力は再度入力
+		}while(astariskValue<=0);
 		//astariskValueの値だけ繰り返し
 		for(int i = 1; i<astariskValue+1; ++i) {
 			//＊１個を表示
