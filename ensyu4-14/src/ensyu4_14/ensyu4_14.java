@@ -1,5 +1,5 @@
 package ensyu4_14;
-
+//入力するための準備
 import java.util.Scanner;
 /*
  * クラス名:ensyu4_14
