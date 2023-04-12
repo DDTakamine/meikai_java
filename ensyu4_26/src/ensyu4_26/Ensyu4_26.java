@@ -21,6 +21,7 @@ public class Ensyu4_26 {
 		System.out.print("整数を加算します");
 		//整数の個数
 		int integerQuantity=0;
+		//繰り返し処理
 		do {
 			//加算する整数の個数入力を促す
 			System.out.print("何個加算しますか：");
@@ -32,8 +33,8 @@ public class Ensyu4_26 {
 		int sumNumber = 0;
 		//何個まで数を足したか数える
 		int countNumber=0;
+		//ループをコントロール
 		int loopControl=0;
-		
 		//countNumberがintegerQuantityより小さい間、
 		while(loopControl<integerQuantity) {
 			//整数値入力を促す
@@ -53,7 +54,6 @@ public class Ensyu4_26 {
 			sumNumber += temporaryInteger;
 			//何回整数足し算したかをメモ
 			++countNumber;
-
 		}
 		//全て負の場合は合計も０、平均も０になる。
 		//その際に、countNumberが０となり、０で割る処理がでてしまうので、
