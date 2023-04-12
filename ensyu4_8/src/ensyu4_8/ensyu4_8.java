@@ -25,7 +25,7 @@ class ensyu4_8{
 			System.out.print("整数値：");
 			//入力された値を処理ができるようにする
 			inputedNumber = standardInput.nextInt();
-		}while(inputedNumber<0);
+		}while(inputedNumber<=0);
 		//桁数をメモする
 		int countNumber = 0;
 		//inputedNumberが０でない間は
