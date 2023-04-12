@@ -18,10 +18,13 @@ public class Ensyu4_23 {
 	public static void main(String[] args){
 		//標準入力するための準備
 		Scanner standardInput = new Scanner(System.in);
-		//段数の入力を促す
-		System.out.println("段数は：");
-		//入力した数値を処理できるようにする
-		int stepValue = standardInput.nextInt();
+		int stepValue=0;
+		do {
+			//段数の入力を促す
+			System.out.println("段数は：");
+			//入力した数値を処理できるようにする
+			stepValue = standardInput.nextInt();
+		}while(stepValue<1);
 		//段数を作成するループ
 		for(int i=1; i<stepValue+1; i++) {
 			//マス目をコントロールするループ
