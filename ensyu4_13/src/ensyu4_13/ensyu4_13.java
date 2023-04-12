@@ -21,22 +21,23 @@ public class ensyu4_13 {
 		//数値入力を促す
 		System.out.println("１からｎまでの和を求めますか？");
 		//いくつまで和をもとめるか
-		int integerN;
+		int integerNumber=0;
 		//繰り返し
 		do {
 			//ｎの値を聞く
 			System.out.print("nの値：");
 			//入力された値を計算できるように処理
-			integerN = standardInput.nextInt();
+			integerNumber = standardInput.nextInt();
 		//入力されたｎの値が０以下ならもう一度入力
-		}while(integerN <= 0);
+		}while(integerNumber <= 0);
 		//和を行った結果をメモ
 		int resultNumber = 0;
 		//nまで足し算をする
-		for(int i=1;i<integerN+1;++i) {
+		for(int i=1;i<integerNumber+1;++i) {
 			//resultNumber にどんどん足していく
 			resultNumber += i;
 		}
+		//結果表示
 		System.out.print(resultNumber);
 	}
 }
