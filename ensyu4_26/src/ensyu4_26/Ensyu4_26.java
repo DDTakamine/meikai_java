@@ -19,10 +19,15 @@ public class Ensyu4_26 {
 		Scanner standardInput = new Scanner(System.in);
 		//プログラム説明
 		System.out.print("整数を加算します");
-		//加算する整数の個数入力を促す
-		System.out.print("何個加算しますか：");
-		//入力した値を処理できるようにする
-		int integerQuantity = standardInput.nextInt();
+		//整数の個数
+		int integerQuantity=0;
+		do {
+			//加算する整数の個数入力を促す
+			System.out.print("何個加算しますか：");
+			//入力した値を処理できるようにする
+			integerQuantity = standardInput.nextInt();
+		//個数は１以上
+		}while(integerQuantity<1);
 		//合計をまとめる変数
 		int sumNumber = 0;
 		//何個まで数を足したか数える
@@ -37,8 +42,11 @@ public class Ensyu4_26 {
 			int temporaryInteger = standardInput.nextInt();
 			//何個整数を入力したかメモ
 			++loopControl;
+			//もし、負の値が入力されたら、
 			if(temporaryInteger<0) {
+				//警告
 				System.out.println("負の数は加算しません。");
+				//続ける
 				continue;
 			}
 			//合計を加算していく
