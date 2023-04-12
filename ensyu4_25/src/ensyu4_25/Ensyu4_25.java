@@ -18,8 +18,10 @@ public class Ensyu4_25 {
 		//標準入力するための準備
 		Scanner standardInput = new Scanner(System.in);
 		//プログラム説明
-		System.out.print("整数を加算します");
+		System.out.println("整数を加算します");
+		//整数の個数を保存
 		int integerQuantity=0;
+		//繰り返し
 		do {
 			//加算する整数の個数入力を促す
 			System.out.print("何個加算しますか：");
