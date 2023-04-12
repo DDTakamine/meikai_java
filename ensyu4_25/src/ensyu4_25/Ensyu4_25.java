@@ -1,8 +1,8 @@
 package ensyu4_25;
 import java.util.Scanner;
 /*
- * クラス名:ensyu4_22
- * 概要  :演習4-22
+ * クラス名:ensyu4_25
+ * 概要  :演習4-25
  * 作成者:R.Akamine
  * 作成日:2023/04/11
  */
@@ -19,10 +19,14 @@ public class Ensyu4_25 {
 		Scanner standardInput = new Scanner(System.in);
 		//プログラム説明
 		System.out.print("整数を加算します");
-		//加算する整数の個数入力を促す
-		System.out.print("何個加算しますか：");
-		//入力した値を処理できるようにする
-		int integerQuantity = standardInput.nextInt();
+		int integerQuantity=0;
+		do {
+			//加算する整数の個数入力を促す
+			System.out.print("何個加算しますか：");
+			//入力した値を処理できるようにする
+			integerQuantity = standardInput.nextInt();
+		//入力は１より値となるようにする
+		}while(integerQuantity<1);
 		//合計をまとめる変数
 		int sumNumber = 0;
 		//何個まで数を足したか数える
