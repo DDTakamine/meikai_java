@@ -20,9 +20,10 @@ public class Ensyu4_22 {
 		Scanner standardInput = new Scanner(System.in);
 		//段数を保存
 		int stepValue=0;
+		//繰り返し処理
 		do {
 			//段数の入力を促す
-			System.out.println("段数は：");
+			System.out.print("段数は：");
 			//入力した数値を処理できるようにする
 			stepValue = standardInput.nextInt();
 		//段数は１以上
