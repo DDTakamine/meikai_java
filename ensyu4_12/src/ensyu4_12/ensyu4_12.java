@@ -21,10 +21,15 @@ class ensyu4_12 {
 		Scanner standardInput = new Scanner(System.in);
 		//プログラム説明
 		System.out.println("カウントアップします。");
-		//数値入力促進
-		System.out.print("正の整数値 : ");
-		//入力した値を処理できるようにする
-		int integerNumber = standardInput.nextInt();
+		//カウントアップする数値を保存
+		int integerNumber;
+		do {
+			//数値入力促進
+			System.out.print("正の整数値 : ");
+			//入力した値を処理できるようにする
+			integerNumber = standardInput.nextInt();
+		//負の場合再度入力
+		}while(integerNumber<0);
 		//iが入力された整数値に達するまでの間
 		for(int i=0 ; integerNumber>=i ; ++i){
 			//カウントアップする
