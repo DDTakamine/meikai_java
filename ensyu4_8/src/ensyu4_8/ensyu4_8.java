@@ -18,10 +18,14 @@ class ensyu4_8{
 	public static void main(String[] args){
 		//標準入力できるように準備
 		Scanner standardInput = new Scanner(System.in);
-		//整数値入力を促す
-		System.out.print("整数値：");
-		//入力された値を処理ができるようにする
-		int inputedNumber = standardInput.nextInt();
+		//入力した値を保存
+		int inputedNumber;
+		do {
+			//整数値入力を促す
+			System.out.print("整数値：");
+			//入力された値を処理ができるようにする
+			inputedNumber = standardInput.nextInt();
+		}while(inputedNumber<0);
 		//桁数をメモする
 		int countNumber = 0;
 		//inputedNumberが０でない間は
