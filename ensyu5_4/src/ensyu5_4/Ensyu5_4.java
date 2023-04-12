@@ -37,7 +37,7 @@ public class Ensyu5_4 {
 		//合計を出力
 		System.out.println("３つの値の合計 : "+(firstOperand+secondOperand+thirdOperand));
 		//平均を出力
-		System.out.println("３つの値の平均 : "+(double)(firstOperand+secondOperand+thirdOperand)/3);
+		System.out.println("３つの値の平均 : "+(firstOperand+secondOperand+thirdOperand)/3.00);
 		
 	}
 }
