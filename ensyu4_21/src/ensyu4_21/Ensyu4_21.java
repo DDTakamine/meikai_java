@@ -26,10 +26,14 @@ public class Ensyu4_21 {
 	public static void main(String[] args){
 		//標準入力するための準備
 		Scanner standardInput = new Scanner(System.in);
-		//段数の入力を促す
-		System.out.print("段数は：");
-		//入力した数値を処理できるようにする
-		int stepValue = standardInput.nextInt();
+		int stepValue=0;
+		do {
+			//段数の入力を促す
+			System.out.print("段数は：");
+			//入力した数値を処理できるようにする
+			stepValue = standardInput.nextInt();
+		//段数は１以上からの入力
+		}while(stepValue<1);
 		//どんな直角三角形かを説明
 		System.out.println("直角が左上に来る三角形");
 		//iは段数を表す変数
