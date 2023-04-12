@@ -21,24 +21,26 @@ class ensyu4_6{
 		//入力の準備
 		Scanner standardInput = new Scanner(System.in);
 		//＊の個数をメモする変数
-		int asterisknumber;
+		int asteriskNumber;
 		do {
+			//０に対する対応
+			System.out.println("0個の場合は表示しません");
 			//数値入力を促す
 			System.out.print("何個*を表示しますか：");
 			//計算できるようにする
-			asterisknumber = standardInput.nextInt();
-		}while(asterisknumber<0);
+			asteriskNumber = standardInput.nextInt();
+		}while(asteriskNumber<0);
 		//＊を何個表示したかをメモする
 		int countValue = 0;
 		//表示したい＊の個数まで表示を繰り返す
-		while(countValue < asterisknumber){
+		while(countValue < asteriskNumber){
 			//*を表示
 			System.out.print('*');
 			//次の＊を表示する準備
 			countValue++;
 		}
 		//読み込んだ値が１以上であれば
-		if (asterisknumber >= 1)
+		if (asteriskNumber >= 1)
 			//改行文字を出力する
 			System.out.println();
 	}
