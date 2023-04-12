@@ -19,9 +19,10 @@ public class Ensyu4_23 {
 		//標準入力するための準備
 		Scanner standardInput = new Scanner(System.in);
 		int stepValue=0;
+		//繰り返し
 		do {
 			//段数の入力を促す
-			System.out.println("段数は：");
+			System.out.print("段数は：");
 			//入力した数値を処理できるようにする
 			stepValue = standardInput.nextInt();
 		}while(stepValue<1);
@@ -31,7 +32,7 @@ public class Ensyu4_23 {
 			for(int j=1; j<2*stepValue; j++) {
 				//全てのマス目の真ん中から（i-1）だけ右と左の範囲にjが入ったら、
 				if(stepValue-(i-1) <= j && j <= stepValue+(i-1)) {
-					//＊を表示
+					//i%10を表示
 					System.out.print(i%10);
 				//ｊがそれ以外の範囲にいる場合は
 				}else {
