@@ -27,15 +27,15 @@ class ensyu4_3{
 		//入力された値を処理できるようにする
 		int secondNumber = standardInput.nextInt();
 		//一時避難変数を初期化して用意
-		int temporary = 0;
+		int temporaryInteger = 0;
 		//もし、１つ目に入力された値が２つ目に入力された値よりも大きいならば、
 		if (firstNumber > secondNumber){
 			//１つ目の値を避難
-			temporary = firstNumber ;
+			temporaryInteger = firstNumber ;
 			//２つ目の値を１つ目の値とする
 			firstNumber = secondNumber ;
 			//避難しておいた値を２つ目の値とする
-			secondNumber = temporary ;
+			secondNumber = temporaryInteger ;
 		}
 		//繰り返し処理するための変数
 		int countNumber = 0 ;
