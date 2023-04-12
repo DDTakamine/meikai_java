@@ -29,7 +29,7 @@ class ensyu4_2{
 		//ルール説明
 		System.out.println("１０～９９の数を当ててください。");
 		//推測した値
-		int guessesNumber;
+		int guessesNumber=0;
 		//推測を繰り返す
 		do{
 			do {
@@ -38,7 +38,7 @@ class ensyu4_2{
 				//入力された値を処理できるようにする
 				guessesNumber = standardInput.nextInt();
 			//入力が正しくない場合は再度入力する
-			}while(guessesNumber<10 || guessesNumber<99);
+			}while(guessesNumber<10 || 99<guessesNumber);
 			//もし、推測した値が正解よりも大きい
 			if(guessesNumber > correctAnswer)
 				//もっと小さな値ですと表示
