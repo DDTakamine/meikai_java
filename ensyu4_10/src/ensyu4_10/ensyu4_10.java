@@ -1,5 +1,5 @@
 package ensyu4_10;
-
+//数値読み込みの準備
 import java.util.Scanner;
 /*
  * クラス名:ensyu4_10
@@ -20,10 +20,15 @@ class ensyu4_10 {
 	public static void main(String[] args){
 		//標準入力の準備
 		Scanner standardInput = new Scanner(System.in);
-		//表示個数数値入力
-		System.out.print("何個*を表示しますか：");
-		//入力された数値を処理で使えるように変換
-		int asteriskNumber = standardInput.nextInt();
+		//＊の個数を保存
+		int asteriskNumber;
+		do {
+			//表示個数数値入力
+			System.out.print("何個*を表示しますか：");
+			//入力された数値を処理で使えるように変換
+			asteriskNumber = standardInput.nextInt();
+		//負の場合は再度入力してもらう
+		}while(asteriskNumber<0);
 		//出力する＊が１個以上ならば、
 		if(asteriskNumber >= 1) {
 			//asteriskNumberまで表示を続ける
