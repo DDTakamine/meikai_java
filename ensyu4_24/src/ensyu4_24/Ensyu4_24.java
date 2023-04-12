@@ -22,7 +22,7 @@ public class Ensyu4_24 {
 		//入力が正しく行われているかチェック
 		do {
 			//整数値の入力を促す
-			System.out.println("2以上の整数：");
+			System.out.print("2以上の整数：");
 			//入力された値を処理できるように変換
 			inputNumber = standardInput.nextInt();
 		//2以上の整数でない場合繰り返し処理
