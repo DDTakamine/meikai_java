@@ -26,7 +26,8 @@ class ensyu4_9{
 			System.out.print("nの値：");
 			//入力された値が計算できるようにする
 			inputedNumber = standardInput.nextInt();
-		}while(inputedNumber<0);
+		//0以下で再入力
+		}while(inputedNumber<=0);
 		//0!は１として考える
 		long resultValue = 1;	
 		//いくつまで数えたかを数える
