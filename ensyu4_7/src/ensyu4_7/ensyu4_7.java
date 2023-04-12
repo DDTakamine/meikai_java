@@ -19,10 +19,15 @@ class ensyu4_7{
 	public static void main(String[] args){
 		//入力準備
 		Scanner standardInput = new Scanner(System.in);
-		//表示個数入力を促す
-		System.out.print("何個表示しますか：");
-		//表示個数を処理できる形にする
-		int printedNumber = standardInput.nextInt();
+		//何個表示するか保存
+		int printedNumber;
+		do {
+			//表示個数入力を促す
+			System.out.print("何個表示しますか：");
+			//表示個数を処理できる形にする
+			printedNumber = standardInput.nextInt();
+		//０以下入力で再入力
+		}while(printedNumber<=0);
 		//表示が終わった個数をメモ
 		int coutnValue = 0;
 		//表示する個数に表示した個数が達するまでの間、
