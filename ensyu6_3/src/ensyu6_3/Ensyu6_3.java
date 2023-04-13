@@ -23,12 +23,14 @@ public class Ensyu6_3 {
 		for(double i=1.1; i<=doubleArray.length+1; i += 1.1) {
 			//初期化
 			doubleArray[arrayIndex] += i;
+			//インデックスを一つ増やす
 			arrayIndex++;
 		}
 		//５個の要素をすべて表示
 		for(int i=0; i<doubleArray.length; ++i) {
 			//結果表示
 			System.out.print("doubleArray["+i+"] = ");
+			//値の表示
 			System.out.printf("%.1f  \n",doubleArray[i]);
 		}
 	}
