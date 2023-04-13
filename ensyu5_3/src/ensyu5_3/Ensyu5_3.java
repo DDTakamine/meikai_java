@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Ensyu5_3 {
 	/*
 	 * 関数名：main
-	 * 概要  :
+	 * 概要  :True False 表示
 	 * 引数  :なし
 	 * 戻り値:なし
 	 * 作成日:2023.04.12
