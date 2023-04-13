@@ -12,8 +12,7 @@ import java.util.Scanner;
 public class Ensyu4_27 {
 	/*
 	 * 関数名：main
-	 * 概要  :n段の数字ピラミッドを表示するプログラム作成
-	 * 			第i行目にはi%10を表示すること
+	 * 概要  :数当てゲームを何回もできるようにする
 	 * 引数  :なし
 	 * 戻り値:なし
 	 * 作成日:2023.04.11
@@ -42,23 +41,21 @@ public class Ensyu4_27 {
 			//入力された値を処理できるようにする
 			countControl = standardInput.nextInt();
 			//入力が正しくない場合は再度入力する
-		}while(countControl<1);
-
+		}while(countControl<=0);
+		//目印
 		Outer:
 			//推測を繰り返す
 			do{
-
 				//推測するときに正しい値になっているか？
 				do {
 					//推測を促す
 					System.out.println("いくつかな？");
+					//入力する数値を知らせる
+					System.out.print("10～99の整数を入力：");
 					//入力された値を処理できるようにする
 					guessesNumber = standardInput.nextInt();
 					//入力が正しくない場合は再度入力する
 				}while(guessesNumber<10 || 99<guessesNumber);
-
-
-
 				//もし、推測した値が正解よりも大きい
 				if(guessesNumber > correctAnswer) {
 					//もっと小さな値ですと表示
@@ -74,15 +71,19 @@ public class Ensyu4_27 {
 					//正解ですと表示
 					System.out.println("正解です！！");
 				}
-				++countControl;
+				//ゲーム回数を一回増やす
+				++loopControl;
+				//もし、ゲーム回数とループ回数が等しいならば、
 				if(countControl==loopControl) {
+					//回数に達したことを伝える
 					System.out.println("回数制限に達しました。");
+					//ゲーム終了を伝える
 					System.out.println("ゲームを終了します");
+					//ループから抜ける
 					break Outer;
 				}
 
-				//推測した値と正解が違う時は再度推測するように促す
+			//推測した値と正解が違う時は再度推測するように促す
 			}while(guessesNumber != correctAnswer);
-
 	}
 }
