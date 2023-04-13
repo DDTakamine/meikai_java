@@ -17,15 +17,19 @@ public class Ensyu6_3 {
 	public static void main(String[] args){
 		//double型要素５の配列を用意
 		double[] doubleArray = new double[5];
+		//配列の添え字をコントロール
+		int arrayIndex=0;
 		//初期化ループ
-		for(int i=1; i<=doubleArray.length; ++i) {
+		for(double i=1.1; i<=doubleArray.length+1; i += 1.1) {
 			//初期化
-			doubleArray[i-1] = (double)1.1*i;
+			doubleArray[arrayIndex] += i;
+			arrayIndex++;
 		}
 		//５個の要素をすべて表示
 		for(int i=0; i<doubleArray.length; ++i) {
 			//結果表示
-			System.out.println("doubleArray["+i+"] = "+doubleArray[i]);
+			System.out.print("doubleArray["+i+"] = ");
+			System.out.printf("%.1f  \n",doubleArray[i]);
 		}
 	}
 }
