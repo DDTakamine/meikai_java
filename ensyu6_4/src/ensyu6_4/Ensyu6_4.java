@@ -59,8 +59,15 @@ public class Ensyu6_4 {
 			//一段終了のため、改行コードを入れる
 			System.out.print("\n");
 		}
-		//区切りを表示
-		System.out.println("---------------------------");
+		
+		//要素の数によって区切りの長さを調整
+		for(int i=0; i<arrayElement; ++i) {
+			//区切りを表示
+			System.out.print("--");
+		}
+		//見た目を整える改行
+		System.out.print("\n");
+		
 		//要素数 % 10 を表示する
 		for(int i=0; i<arrayElement; ++i) {
 			//要素数の表示
