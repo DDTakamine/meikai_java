@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Ensyu5_6 {
 	/*
 	 * 関数名：main
-	 * 概要  :
+	 * 概要  :intとfloatの0.001ずつ増やしたときの違いを表示
 	 * 引数  :なし
 	 * 戻り値:なし
 	 * 作成日:2023.04.12
@@ -21,12 +21,15 @@ public class Ensyu5_6 {
 		int intValue = 0;
 		//int型の変数の準備
 		int   deltaValue = 1000;
-		
-		System.out.println("   float       int  ");
-		System.out.println("---------------------");
-		
+		//結果を比べる
+		System.out.println(" float         int  ");
+		//区切り
+		System.out.println("--------------------");
+		//それぞれの値を表示
 		for(float floatValue = 0.0F; floatValue<=1.0F; floatValue+=0.001F) {
-			System.out.println(floatValue + "  " + (float)intValue/deltaValue );
+			//System.out.printf(floatValue + "\t" + (float)intValue/deltaValue +"\n");
+			System.out.printf( "%6f \t %f \n",floatValue,(float)intValue/deltaValue);
+			//割られる数を一つ増やす
 			++intValue;
 		}
 		
