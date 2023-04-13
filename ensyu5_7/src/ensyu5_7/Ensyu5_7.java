@@ -15,6 +15,7 @@ public class Ensyu5_7 {
 	 * 作成日:2023.04.12
 	 */
 	public static void main(String[] args){
+		int secondValue;
 		for(float floatValue = 0.0F; floatValue<=1.0F; floatValue += 0.001) {
 			System.out.println("２乗前の数値 : " + floatValue);
 			System.out.println("２乗の結果 　: " + floatValue*floatValue);
