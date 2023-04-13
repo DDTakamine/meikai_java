@@ -22,13 +22,15 @@ public class Ensyu6_4 {
 		Random rand = new Random();
 		//標準入力の準備
 		Scanner standardInput = new Scanner(System.in);
-		
+		//配列の要素を格納
 		int arrayElement=0;
+		//繰り返し
 		do {
 			//要素数入力を促す
 			System.out.print("要素数：");
 			//要素数を処理できるようにする
 			arrayElement = standardInput.nextInt();	
+		//1以下の場合は再度入力
 		}while(arrayElement <1);
 		
 		//乱数を入れる配列を用意
@@ -51,8 +53,11 @@ public class Ensyu6_4 {
 				if(intArray[j] == maxValue-i) {
 					//*を表示
 					System.out.print("* ");
+					//格納されている数値を一つ減らす
 					intArray[j] -= 1;
+				//それ以外なら、
 				}else {
+					//スペースを入れる
 					System.out.print("  ");
 				}
 			}
