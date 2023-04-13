@@ -73,7 +73,7 @@ public class Ensyu6_4 {
 		//見た目を整える改行
 		System.out.print("\n");
 		
-		//要素数 % 10 を表示する
+		//要素数 i % 10 を表示する
 		for(int i=0; i<arrayElement; ++i) {
 			//要素数の表示
 			System.out.print(i%10+" ");
