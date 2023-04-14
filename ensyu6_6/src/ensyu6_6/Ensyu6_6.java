@@ -23,7 +23,7 @@ public class Ensyu6_6 {
 		//繰り返し
 		do {
 			//人数の入力を促す
-			System.out.print("人数を入力します。");
+			System.out.print("人数を入力します:");
 			//人数入力したあとに処理できるようにする
 			peopleNumber = standardInput.nextInt();
 		//０以下の人数の時は再度入力
@@ -37,9 +37,10 @@ public class Ensyu6_6 {
 			//点数を正しく入力するためのループ
 			do {
 				//人数分の得点入力を促す
-				System.out.println((i+1)+"人目の得点を入力します。");
+				System.out.println((i+1)+"人目の得点を入力します.");
 				//標準入力から値を受け取る
 				scoreArray[i]  = standardInput.nextInt();
+			//得点は０～１００の間、それ以外は入力できない
 			}while(scoreArray[i] < 0 || 100 < scoreArray[i]);
 		}
 		//合計、最大値、最小値を求めるループ
@@ -60,10 +61,10 @@ public class Ensyu6_6 {
 		//合計点の表示
 		System.out.println("合計："+sumValue);
 		//平均点の表示
-		System.out.println("平均："+(double)sumValue/peopleNumber);
+		System.out.printf("平均：%.3f \n",(double)sumValue/peopleNumber);
 		//最高点の表示
 		System.out.println("最高点："+maxValue);
 		//最小点の表示
-		System.out.println("最小点："+minValue);
+		System.out.println("最低点："+minValue);
 	}
 }
