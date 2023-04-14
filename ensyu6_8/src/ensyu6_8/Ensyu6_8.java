@@ -21,6 +21,7 @@ public class Ensyu6_8 {
 		Scanner standardInput = new Scanner(System.in);
 		//配列の要素数を保存
 		int arrayElement = 0;
+		//繰り返し
 		do {
 			//要素数の入力を促す
 			System.out.print("要素数：");
