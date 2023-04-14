@@ -24,20 +24,20 @@ public class Enayu6_7 {
 		//標準入力の準備
 		Scanner standardInput = new Scanner(System.in);
 		//乱数の範囲をしてい
-		int randomRange = 10;
+		final int RANDOMRANGE = 10;
 		//配列要素数を保存
-		final int arrayElement = 12;
+		final int ARRAYELEMENT = 12;
 		//乱数を保存する配列を用意
-		int[] intArray = new int[arrayElement];
+		int[] intArray = new int[ARRAYELEMENT];
 		//配列に乱数を入れていく
-		for(int i=0; i<arrayElement; i++) {
-			//0～9の値を乱数発生
-			intArray[i] = randValue.nextInt(randomRange);
+		for(int i=0; i<ARRAYELEMENT; i++) {
+			//1～10の値を乱数発生
+			intArray[i] = randValue.nextInt(RANDOMRANGE) + 1;
 		}
 		//配列の値を表示していく
 		System.out.print("配列aの全要素の値\n{ ");
 		//配列を一つ一つ参照
-		for(int i=0; i<arrayElement; i++) {
+		for(int i=0; i<ARRAYELEMENT; i++) {
 			//値を表示
 			System.out.print(intArray[i]+" ");
 		}
@@ -52,11 +52,11 @@ public class Enayu6_7 {
 			//入力された値を保存
 			keyValue = standardInput.nextInt();
 		//0～９以外の値ならば再入力
-		}while(keyValue<0 || 9<keyValue);
+		}while(keyValue<0 || RANDOMRANGE-1<keyValue);
 		//探したい値が格納されているindexを保存する変数
 		int sentinelIndex= -1;
 		//配列全要素を調べる
-		for(int i=0; i<arrayElement; i++) {
+		for(int i=0; i<ARRAYELEMENT; i++) {
 			//もし、配列の要素と探したい値が等しいならば、
 			if(intArray[i] == keyValue) {
 				//sentinelIndexの値を書き換える
