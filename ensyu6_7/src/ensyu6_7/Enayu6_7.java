@@ -51,7 +51,7 @@ public class Enayu6_7 {
 			System.out.print("探す値：");
 			//入力された値を保存
 			keyValue = standardInput.nextInt();
-		//0～９以外の値ならば再入力
+		//１～RANDOMRANGE以外の値ならば再入力
 		}while(keyValue<0 || RANDOMRANGE-1<keyValue);
 		//探したい値が格納されているindexを保存する変数
 		int sentinelIndex= -1;
