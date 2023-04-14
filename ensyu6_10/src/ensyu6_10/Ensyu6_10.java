@@ -23,8 +23,8 @@ public class Ensyu6_10 {
 		Scanner standardInput = new Scanner(System.in);
 		//乱数発生準備
 		Random randomValue = new Random();
-		//乱数を０～９作成するために１０を格納
-		int randomRange = 10;
+		//乱数作成するために１０を格納
+		final int RANDOMRANGE = 10;
 		//要素数の保存用
 		int arrayElement = 0;
 		//要素数が正しく入力できるようにループ
@@ -42,10 +42,14 @@ public class Ensyu6_10 {
 			if(i != 0) {
 				//値が連続しないように処理を加える
 				do {
-					//一度、乱数を配列に格納
-					intArray[i] = randomValue.nextInt(randomRange);
+					//一度、１～RANDOMRANGEの範囲で乱数発生。配列に格納
+					intArray[i] = randomValue.nextInt(RANDOMRANGE)+1;
 				//一つ前の要素と同じにならないか確認
 				}while(intArray[i-1] == intArray[i]);
+			//０番の時は
+			}else {
+				//乱数をそのまま入れる
+				intArray[i] = randomValue.nextInt(RANDOMRANGE)+1;
 			}
 		}
 		//配列を表示する
