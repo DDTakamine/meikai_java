@@ -33,6 +33,7 @@ public class Ensyu6_10 {
 			System.out.print("要素数：");
 			//入力した値を保存
 			arrayElement = standardInput.nextInt();
+		//要素数は１以上とする
 		}while(arrayElement<1);
 		//乱数保存用配列を用意
 		int[] intArray = new int[arrayElement];
