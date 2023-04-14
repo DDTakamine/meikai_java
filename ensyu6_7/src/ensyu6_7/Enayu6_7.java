@@ -7,7 +7,7 @@ import java.util.Scanner;
  * クラス名:ensyu6_7
  * 概要  :演習6-7
  * 作成者:R.Akamine
- * 作成日:2023/04/13
+ * 作成日:2023/04/14
  */
 public class Enayu6_7 {
 	/*
@@ -16,13 +16,15 @@ public class Enayu6_7 {
 	 * 			最も末尾側に位置する要素を見つけるプログラムを作成
 	 * 引数  :なし
 	 * 戻り値:なし
-	 * 作成日:2023.04.13
+	 * 作成日:2023.04.14
 	 */
 	public static void main(String[] args){
 		//乱数発生準備
 		Random randValue = new Random();
 		//標準入力の準備
 		Scanner standardInput = new Scanner(System.in);
+		//乱数の範囲をしてい
+		int randomRange = 10;
 		//配列要素数を保存
 		final int arrayElement = 12;
 		//乱数を保存する配列を用意
@@ -30,7 +32,7 @@ public class Enayu6_7 {
 		//配列に乱数を入れていく
 		for(int i=0; i<arrayElement; i++) {
 			//0～9の値を乱数発生
-			intArray[i] = randValue.nextInt(10);
+			intArray[i] = randValue.nextInt(randomRange);
 		}
 		//配列の値を表示していく
 		System.out.print("配列aの全要素の値\n{ ");
