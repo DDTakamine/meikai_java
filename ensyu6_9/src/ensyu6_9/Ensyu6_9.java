@@ -12,8 +12,7 @@ import java.util.Scanner;
 public class Ensyu6_9 {
 	/*
 	 * 関数名：main
-	 * 概要  :double型の配列　全要素の合計と平均を求める
-	 * 			要素数と全要素の値はキーボードから読み込む
+	 * 概要  :
 	 * 引数  :なし
 	 * 戻り値:なし
 	 * 作成日:2023.04.14
