@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class Ensyu6_11 {
 	/*
 	 * 関数名：main
-	 * 概要  :異なる要素が同じ値を持つことがないように演習6-10のプログラムを改変
+	 * 概要  :異なる要素が同じ値を持つことがないように演習6-9のプログラムを改変
 	 * 			要素数は標準入力
 	 * 引数  :なし
 	 * 戻り値:なし
@@ -24,7 +24,7 @@ public class Ensyu6_11 {
 		//乱数発生準備
 		Random randomValue = new Random();
 		//乱数作成するために１０を格納
-		final int RANDOMRANGE = 10;
+		final int RANDOM_RANGE = 10;
 		//要素数の保存用
 		int arrayElement = 0;
 		//要素数が正しく入力できるようにループ
@@ -33,15 +33,16 @@ public class Ensyu6_11 {
 			System.out.print("要素数：");
 			//入力した値を保存
 			arrayElement = standardInput.nextInt();
-			//要素数は１以上とする
-		}while(arrayElement<1 || RANDOMRANGE<arrayElement);
+			//要素数は１以上とする または　乱数の範囲は配列の要素より小さい
+		}while(arrayElement<1 || RANDOM_RANGE<arrayElement);
 		//乱数保存用配列を用意
 		int[] intArray = new int[arrayElement];
 		//乱数を発生させ、保存するループ
 		for(int i=0; i<arrayElement; i++) {
 			//0番目以外で、
 			if(i != 0) {
-				intArray[i] = randomValue.nextInt(RANDOMRANGE)+1;
+				//１以上RANDOM_RANGE以下の範囲で乱数を発生
+				intArray[i] = randomValue.nextInt(RANDOM_RANGE)+1;
 				//i番目までの要素で同じ値がないかチェック
 				for(int j=0; j<i; j++) {
 					//もし、同じ値が見つかれば、
@@ -54,7 +55,7 @@ public class Ensyu6_11 {
 			//０番の時は
 			}else {
 				//乱数をそのまま入れる
-				intArray[i] = randomValue.nextInt(RANDOMRANGE)+1;
+				intArray[i] = randomValue.nextInt(RANDOM_RANGE)+1;
 			}
 		}
 		//配列を表示する
