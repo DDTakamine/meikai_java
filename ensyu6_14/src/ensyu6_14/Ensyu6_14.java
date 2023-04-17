@@ -63,6 +63,8 @@ public class Ensyu6_14 {
 					System.out.println("不正解です。再入力します。");
 					inputString = standardInput.next();
 				}while(answerMonth[questionNumber-1].equals(inputString)  !=  true);
+				//正解表示
+				System.out.println("正解です!!");
 			}
 			//もう一度問題を出すか？
 			System.out.print("もう一度？  1...Yes  それ以外...No  :  ");
