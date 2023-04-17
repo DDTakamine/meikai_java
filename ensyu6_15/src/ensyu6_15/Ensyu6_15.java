@@ -60,6 +60,14 @@ public class Ensyu6_15 {
 				System.out.println("正解です!!");
 			//不正解ならば、
 			}else {
+				//繰り返し
+				do {
+				//不正解と表示
+				System.out.println("不正解です。再入力します。");
+				//入力を受け取る
+				inputString = standardInput.next();
+			//不正解の間、
+			}while(answerDay[questionNumber-1].equals(inputString)  !=  true);
 				//不正解と表示
 				System.out.println("不正解です。");
 			}
