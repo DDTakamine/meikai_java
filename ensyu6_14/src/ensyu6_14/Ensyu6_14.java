@@ -58,8 +58,11 @@ public class Ensyu6_14 {
 				System.out.println("正解です!!");
 			//不正解ならば、
 			}else {
-				//不正解と表示
-				System.out.println("不正解です。");
+				do {
+					//不正解と表示
+					System.out.println("不正解です。再入力します。");
+					inputString = standardInput.next();
+				}while(answerMonth[questionNumber-1].equals(inputString)  !=  true);
 			}
 			//もう一度問題を出すか？
 			System.out.print("もう一度？  1...Yes  それ以外...No  :  ");
