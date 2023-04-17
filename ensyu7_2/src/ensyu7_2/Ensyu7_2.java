@@ -42,7 +42,6 @@ public class Ensyu7_2 {
 		int secondOperand = -5;
 		//値を一つ用意
 		int thirdOperand  = 189;
-		
 		//返り値を表示
 		System.out.println("返り値は"+min(firstOperand,secondOperand,thirdOperand)+"です。");
 		
