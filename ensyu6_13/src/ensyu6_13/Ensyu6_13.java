@@ -1,6 +1,12 @@
 package ensyu6_13;
 //乱数発生準備
 import java.util.Random;
+/*
+ * クラス名:ensyu6_13
+ * 概要  :演習6-13
+ * 作成者:R.Akamine
+ * 作成日:2023/04/14
+ */
 public class Ensyu6_13 {
 	/*
 	 * 関数名：main
