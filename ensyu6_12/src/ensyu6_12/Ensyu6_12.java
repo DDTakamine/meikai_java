@@ -23,24 +23,24 @@ public class Ensyu6_12 {
 		//乱数発生準備
 		Random randomValue = new Random();
 		//乱数の範囲を指定
-		final int RANDOMRANGE = 30;
+		final int RANDOM_RANGE = 30;
 		//配列の要素数を指定
-		final int ARRAYELEMENT = 6;
+		final int ARRAY_ELEMENT = 6;
 		//配列を作成
-		int[] intArray = new int[ARRAYELEMENT];
+		int[] intArray = new int[ARRAY_ELEMENT];
 		//配列に乱数を作成
-		for(int i=0; i<ARRAYELEMENT; i++) {
+		for(int i=0; i<ARRAY_ELEMENT; i++) {
 			//乱数を格納
-			intArray[i] =  randomValue.nextInt(RANDOMRANGE);
+			intArray[i] =  randomValue.nextInt(RANDOM_RANGE);
 			//配列の表示
 			System.out.println("a[ "+i+" ]  =  "+intArray[i]);
 		}
 		//退避用変数
 		int temporaryNumber = 0;
-		//ランダムな順となるように配列のインデックスを決める
-		int randomIndex = randomValue.nextInt(ARRAYELEMENT);
 		//全ての配列に対して値を一度は入れ替える
-		for(int i=0; i<ARRAYELEMENT; i++) {
+		for(int i=0; i<ARRAY_ELEMENT; i++) {
+			//ランダムな順となるように配列のインデックスを決める
+			int randomIndex = randomValue.nextInt(ARRAY_ELEMENT);
 			//値を退避
 			temporaryNumber = intArray[i];
 			//空になった変数に値を入れる
@@ -51,7 +51,7 @@ public class Ensyu6_12 {
 		//並び替えしたことを伝える
 		System.out.println("要素の並びをシャッフルしました。");
 		//配列に乱数を作成
-		for(int i=0; i<ARRAYELEMENT; i++) {
+		for(int i=0; i<ARRAY_ELEMENT; i++) {
 			//入れ替え後の配列の表示
 			System.out.println("a[ "+i+" ]  =  "+intArray[i]);
 		}
