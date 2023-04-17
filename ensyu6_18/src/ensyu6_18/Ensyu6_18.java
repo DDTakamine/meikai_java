@@ -19,37 +19,48 @@ public class Ensyu6_18 {
 	public static void main(String[] args){
 		//標準入力の準備
 		Scanner standardInput = new Scanner(System.in);
-		
+		//行数を保存
 		int rowValue    = 0;
+		//列数を保存
 		int columnValue = 0;
+		//行数の入力
 		System.out.print("行数の入力：");
+		//入力した値を受け取る
 		rowValue = standardInput.nextInt();
-		
-		
+		//行数のみ定義した行列を作成
 		int[][] arrayMatrix = new int[rowValue][];
-		
-		
+		//入力された行数分だけループ
 		for(int i=0; i<rowValue; ++i) {
+			//正の入力が正しくされているか確認ループ
 			do {
-				//System.out.print("--------0以上の整数値での入力\n");
+				//列数をいくつにするか聞く
 				System.out.print(i+"行目の列数：");
+				//入力された値を保存
 				columnValue = standardInput.nextInt();
+			//０より小さい場合、再入力
 			}while(columnValue < 0);
-			
+			//入力されたi行目の列数で行列を作る
 			arrayMatrix[i] = new int[columnValue];
-			
+			//要素を入れ込んでいく
 			System.out.println(i+"行目の要素");
+			//要素を入れ込んでいくためのループ
 			for(int j=0; j<columnValue; ++j) {
+				//どこの入力かがわかるように表示
 				System.out.print(i+"行"+j+"列：");
+				//入力された値を保存
 				arrayMatrix[i][j] = standardInput.nextInt();
 			}
 		}
-		
+		//結果表示準備
 		System.out.println("\n～行列の表示～");
+		//行を操作するループ
 		for(int i=0; i<rowValue; ++i ) {
+			//列を操作するループ
 			for(int j=0; j<columnValue; ++j) {
+				//要素一つ一つを表示
 				System.out.print(arrayMatrix[i][j]+"\t");
 			}
+			//１つの行が表示終わったら改行
 			System.out.print("\n");
 		}
 	}
