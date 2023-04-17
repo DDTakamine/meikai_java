@@ -4,8 +4,8 @@ import java.util.Random;
 //標準入力準備
 import java.util.Scanner;
 /*
- * クラス名:ensyu6_11
- * 概要  :演習6-11
+ * クラス名:ensyu6_12
+ * 概要  :演習6-12
  * 作成者:R.Akamine
  * 作成日:2023/04/14
  */
@@ -17,7 +17,6 @@ public class Ensyu6_12 {
 	 * 戻り値:なし
 	 * 作成日:2023.04.14
 	 */
-	
 	public static void main(String[] args){
 		//標準入力の準備
 		Scanner standardInput = new Scanner(System.in);
@@ -32,7 +31,7 @@ public class Ensyu6_12 {
 		//配列に乱数を作成
 		for(int i=0; i<ARRAYELEMENT; i++) {
 			//乱数を格納
-			intArray[i] =  randomValue.nextInt();
+			intArray[i] =  randomValue.nextInt(RANDOMRANGE);
 			//配列の表示
 			System.out.println("a[ "+i+" ]  =  "+intArray[i]);
 		}
@@ -50,7 +49,7 @@ public class Ensyu6_12 {
 			intArray[randomIndex] = temporaryNumber;
 		}
 		//並び替えしたことを伝える
-		System.out.println("要素の並びを逆転しました。");
+		System.out.println("要素の並びをシャッフルしました。");
 		//配列に乱数を作成
 		for(int i=0; i<ARRAYELEMENT; i++) {
 			//入れ替え後の配列の表示
