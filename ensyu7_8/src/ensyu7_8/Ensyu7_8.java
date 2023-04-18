@@ -20,6 +20,7 @@ public class Ensyu7_8 {
 	 * 作成日:2023.04.18
 	 */
 	public static int random(int a, int b) {
+		//乱数発生準備
 		Random randomValue = new Random();
 		//もし、aの方が大きいならば、
 		if(b < a) {
