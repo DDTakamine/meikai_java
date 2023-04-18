@@ -39,10 +39,10 @@ public class Ensyu7_8 {
 	public static void main(String[] args){
 		//標準入力の準備
 		Scanner standardInput = new Scanner(System.in);
+		//範囲の値を保存
 		int firstArgument = 0;
+		//範囲の値を保存
 		int secondArgument = 0;
-		
-		
 		//入力を促す
 		System.out.println("いくつからいくつまでの範囲で乱数を発生させますか？");
 		//１つめの入力を促す
@@ -53,7 +53,7 @@ public class Ensyu7_8 {
 		System.out.print("２つ目：");
 		//入力された値を保存
 		secondArgument = standardInput.nextInt(); 
-		
+		//結果を保存
 		System.out.println("発生させた乱数は"+random(firstArgument,secondArgument)+"です。");
 		
 	}
