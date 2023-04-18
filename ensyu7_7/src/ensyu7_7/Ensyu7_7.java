@@ -16,11 +16,7 @@ public class Ensyu7_7 {
 	 * 作成日:2023.04.18
 	 */
 	public static void putStars(int n){
-		//n回繰り返す
-		while(n-- > 0) {
-			//＊を表示
-			System.out.print("*");
-		}
+		putChars('*',n);
 	}
 	/*
 	 * 関数名：putChars
@@ -62,9 +58,7 @@ public class Ensyu7_7 {
 		//stepLimitより小さい値は正しくない値、再入力
 		}while(numberOfStep<stepLimit);
 		//スペースと＊を表示するループ
-		for(int i=0; i<= numberOfStep; i++) {
-			//スペースを表示
-			putChars(' ',numberOfStep-i);
+		for(int i=1; i<= numberOfStep; i++) {
 			//＊を表示
 			putStars(i);
 			//改行を表示
