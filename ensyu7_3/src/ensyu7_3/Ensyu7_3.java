@@ -14,6 +14,7 @@ public class Ensyu7_3 {
 	 * 作成日:2023.04.18
 	 */
 	public static int med(int firstOperand,int secondOperand,int thirdOperand) {
+		//結果を保存
 		int resultValue = 0;
 		//もし、１番目が一番小さく３番目が一番大きい　または　１番目が一番大きく３番目が一番小さいならば、
 		if (firstOperand<=secondOperand && secondOperand<=thirdOperand || thirdOperand<=secondOperand && secondOperand<=firstOperand) {
@@ -28,7 +29,7 @@ public class Ensyu7_3 {
 			//中央値は１番目の値
 			resultValue = firstOperand;
 		}
-		
+		//結果を返す
 		return resultValue ;
 	}
 	/*
@@ -45,6 +46,7 @@ public class Ensyu7_3 {
 		int secondOperand = -19;
 		//値を一つ作る
 		int thirdOperand = 830;
+		//結果を表示
 		System.out.println(med(firstOperand,secondOperand,thirdOperand));
 	}
 	
