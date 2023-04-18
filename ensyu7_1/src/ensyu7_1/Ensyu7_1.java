@@ -45,9 +45,9 @@ public class Ensyu7_1 {
 		//入力を促す
 		System.out.print("値を入力してください：");
 		//数値を受け取る
-		int minus = signOf(standardInput.nextInt());
+		int signWhich = signOf(standardInput.nextInt());
 		//返り値を表示
-		System.out.println(minus+"が返り値です");
+		System.out.println(signWhich+"が返り値です");
 	}
 	
 	
