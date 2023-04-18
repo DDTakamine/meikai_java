@@ -63,10 +63,12 @@ public class Ensyu6_16 {
 		for(int i=0; i<firstMatrixRow; ++i) {
 			//列に対するループ
 			for(int j=0; j<secondMatrixColumn; ++j) {
+				//初期化
+				newElement=0;
 				//要素一つ一つを計算していくループ
 				for(int k=0; k<secondMatrixRow; ++k) {
 					//計算していく
-					newElement = firstMatrix[j][k] * secondMatrix[k][j];
+					newElement += firstMatrix[i][k] * secondMatrix[k][j];
 				}
 				//計算した結果を保存
 				newMatrix[i][j] = newElement;
@@ -77,7 +79,7 @@ public class Ensyu6_16 {
 			//列に対するループ
 			for(int j=0; j<secondMatrixColumn; ++j) {
 				//要素一つ表示
-				System.out.printf("%d \t",newMatrix[i][j]);
+				System.out.printf("%5d \t",newMatrix[i][j]);
 			}
 			//行の表示が終えたので、改行
 			System.out.print("\n");
