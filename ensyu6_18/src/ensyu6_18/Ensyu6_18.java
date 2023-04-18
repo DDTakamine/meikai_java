@@ -21,12 +21,16 @@ public class Ensyu6_18 {
 		Scanner standardInput = new Scanner(System.in);
 		//行数を保存
 		int rowValue    = 0;
+		//繰り返し
+		do{
+			//行数の入力
+			System.out.print("行数の入力：");
+			//入力した値を受け取る
+			rowValue = standardInput.nextInt();
+		//入力された値が負の間、
+		}while(rowValue<1);
 		//列数を保存
-		int columnValue = 0;
-		//行数の入力
-		System.out.print("行数の入力：");
-		//入力した値を受け取る
-		rowValue = standardInput.nextInt();
+		int []columnValue = new int [rowValue];
 		//行数のみ定義した行列を作成
 		int[][] arrayMatrix = new int[rowValue][];
 		//入力された行数分だけループ
@@ -34,21 +38,21 @@ public class Ensyu6_18 {
 			//正の入力が正しくされているか確認ループ
 			do {
 				//列数をいくつにするか聞く
-				System.out.print(i+"行目の列数：");
+				System.out.print((i+1)+"行目の列数：");
 				//入力された値を保存
-				columnValue = standardInput.nextInt();
+				columnValue[i] = standardInput.nextInt();
 			//０より小さい場合、再入力
-			}while(columnValue < 0);
+			}while(columnValue[i] < 0);
 			//入力されたi行目の列数で行列を作る
-			arrayMatrix[i] = new int[columnValue];
+			arrayMatrix[i] = new int[columnValue[i]];
 			//要素を入れ込んでいく
-			System.out.println(i+"行目の要素");
+			System.out.println((i+1)+"行目の要素");
 			//要素を入れ込んでいくためのループ
-			for(int j=0; j<columnValue; ++j) {
+			for(int j=0; j<columnValue[i]; ++j) {
 				//どこの入力かがわかるように表示
-				System.out.print(i+"行"+j+"列：");
+				System.out.print((i+1)+"行"+(j+1)+"列：");
 				//入力された値を保存
-				arrayMatrix[i][j] = standardInput.nextInt();
+				arrayMatrix[i][j] = standardInput.nextInt();	
 			}
 		}
 		//結果表示準備
@@ -56,9 +60,9 @@ public class Ensyu6_18 {
 		//行を操作するループ
 		for(int i=0; i<rowValue; ++i ) {
 			//列を操作するループ
-			for(int j=0; j<columnValue; ++j) {
+			for(int j=0; j<columnValue[i]; ++j) {
 				//要素一つ一つを表示
-				System.out.print(arrayMatrix[i][j]+"\t");
+				System.out.printf("%5d \t",arrayMatrix[i][j]);
 			}
 			//１つの行が表示終わったら改行
 			System.out.print("\n");
