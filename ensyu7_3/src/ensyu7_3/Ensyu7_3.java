@@ -14,19 +14,22 @@ public class Ensyu7_3 {
 	 * 作成日:2023.04.18
 	 */
 	public static int med(int firstOperand,int secondOperand,int thirdOperand) {
+		int resultValue = 0;
 		//もし、１番目が一番小さく３番目が一番大きい　または　１番目が一番大きく３番目が一番小さいならば、
 		if (firstOperand<=secondOperand && secondOperand<=thirdOperand || thirdOperand<=secondOperand && secondOperand<=firstOperand) {
 			//中央値は２番目の値
-			return(secondOperand);
+			resultValue = secondOperand;
 		//もし、１番目が一番小さく２番目が一番大きい　または　２番目が一番小さく１番目が一番大きいならば
 		}else if (firstOperand<=thirdOperand && thirdOperand<=secondOperand || secondOperand<=thirdOperand && thirdOperand<=firstOperand) {
 			//中央値は３番目の値
-			return(thirdOperand);
+			resultValue = thirdOperand;
 		//もし、２番目が一番小さく３番目が一番大きい　または　３番目が一番小さく２番目が一番大きいならば、	
 		}else if (secondOperand<=firstOperand && firstOperand<=thirdOperand || thirdOperand<=firstOperand && firstOperand<=secondOperand) {
 			//中央値は１番目の値
-			return(firstOperand);
+			resultValue = firstOperand;
 		}
+		
+		return resultValue ;
 	}
 	/*
 	 * 関数名：main
