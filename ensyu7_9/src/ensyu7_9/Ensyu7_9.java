@@ -29,7 +29,7 @@ public class Ensyu7_9 {
 			Scanner standardInput = new Scanner(System.in);
 			//標準入力の値を保存
 			inputInteger = standardInput.nextInt();
-		//０以下の値が入力されたら再入力
+		//positiveInteger以下の値が入力されたら再入力
 		}while(inputInteger<=positiveInteger);
 		//結果を返す
 		return inputInteger;
