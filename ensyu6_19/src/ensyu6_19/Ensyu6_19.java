@@ -45,7 +45,7 @@ public class Ensyu6_19 {
 				//全ての生徒の得点を保存する配列の人数を確定していく
 				allScore[i] = new double[studentsNumber];
 			//人数が負の間、
-			}while(studentsNumber < 0);
+			}while(studentsNumber <= 0);
 			//各生徒の得点を入力していく
 			for(int j=0; j<studentsNumber; j++) {
 				//正しい入力がされるか確認
@@ -79,7 +79,7 @@ public class Ensyu6_19 {
 		//クラスごとに結果を表示
 		for(int i=0; i<classNumber; i++) {
 			//クラスごとの表示
-			System.out.printf(" %d組｜　　%.0f \t %.1f　\n",i,classTotal[i],classTotal[i]/allScore[i].length);
+			System.out.printf(" %d組｜　　%.0f \t %.1f　\n",(i+1),classTotal[i],classTotal[i]/allScore[i].length);
 		}
 		//区切りの表示
 		System.out.print("----＋-------------------\n");
