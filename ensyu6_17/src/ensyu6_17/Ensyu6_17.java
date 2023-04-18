@@ -27,9 +27,10 @@ public class Ensyu6_17 {
 		//人数分ループ
 		for(int i=0; i<STUDENTS_NUMBER; ++i) {
 			//i番目の人の得点入力を促す
-			System.out.println(i+"番目の得点入力");
+			System.out.println((i+1)+"番目の得点入力");
 			//科目分ループ
 			for(int j=0; j<SUBJECT_NUMBER; ++j) {
+				//繰り返し
 				do {
 					//国語の得点入力
 					if(j==0) {
