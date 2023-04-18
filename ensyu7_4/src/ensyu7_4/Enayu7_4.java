@@ -2,8 +2,8 @@ package ensyu7_4;
 //標準入力準備
 import java.util.Scanner;
 /*
- * クラス名:ensyu7_2
- * 概要  :演習7-2
+ * クラス名:Ensyu7_4
+ * 概要  :演習7-4
  * 作成者:R.Akamine
  * 作成日:2023/04/18
  */
