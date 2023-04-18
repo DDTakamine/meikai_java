@@ -20,10 +20,16 @@ public class Ensyu6_19 {
 	public static void main(String[] args){
 		//標準入力の準備
 		Scanner standardInput = new Scanner(System.in);
-		//クラス数の入力
-		System.out.print("クラス数：");
-		//入力された値を保存
-		int classNumber = standardInput.nextInt();
+		//クラス数を保存
+		int classNumber=0;
+		//繰り返し
+		do {
+			//クラス数の入力
+			System.out.print("クラス数：");
+			//入力された値を保存
+			classNumber = standardInput.nextInt();
+		//クラス数は負の値ではダメ
+		}while(classNumber<1);
 		//全生徒の得点を保存する配列を用意
 		double[][] allScore = new double[classNumber][];
 		//クラスの生徒数を保存
@@ -33,7 +39,7 @@ public class Ensyu6_19 {
 			//正しい値が入力されるか確認ループ
 			do {
 				//クラスの人数確認
-				System.out.print(i+"組の人数：");
+				System.out.print((i+1)+"組の人数：");
 				//入力された値を保存
 				studentsNumber = standardInput.nextInt();
 				//全ての生徒の得点を保存する配列の人数を確定していく
@@ -45,7 +51,7 @@ public class Ensyu6_19 {
 				//正しい入力がされるか確認
 				do {
 					//どの生徒の得点が入力しているのか知らせる
-					System.out.print(i+"組"+j+"番"+"の点数：");
+					System.out.print((i+1)+"組"+j+"番"+"の点数：");
 					//入力した値を保存
 					allScore[i][j] = standardInput.nextInt();
 				//負の値が入力されている間、
