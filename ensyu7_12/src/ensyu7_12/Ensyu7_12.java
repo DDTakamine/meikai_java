@@ -5,7 +5,7 @@ import java.util.Scanner;
  * クラス名:ensyu7_12
  * 概要  :演習7-12
  * 作成者:R.Akamine
- * 作成日:2023/04/18
+ * 作成日:2023/04/19
  */
 public class Ensyu7_12 {
 	/*
@@ -17,7 +17,7 @@ public class Ensyu7_12 {
 	 * 作成日:2023.04.19
 	 */
 	static int rRotate(int x, int n) {
-		//指定されたビット数をコピー
+		//後ろのバイナリーを保存
 		int tailBit = 1;
 		//シフトするビットを保存
 		int shiftBit= 0;
@@ -27,6 +27,7 @@ public class Ensyu7_12 {
 		tailBit = x<<(MAX_BIT_NUMBER-n);
 		//xの値をnだけ左シフトして、下位ｎビットに０を入れる
 		shiftBit = x >>>n;
+		//tailBit shiftBitで論理和をとる
 		x = tailBit | shiftBit;
 		//結果を返す
 		return x;
@@ -40,7 +41,7 @@ public class Ensyu7_12 {
 	 * 作成日:2023.04.19
 	 */
 	static int lRotate(int x, int n) {
-		//指定されたビット数をコピー
+		//先頭のバイナリーを保存
 		int headBit = 1;
 		//シフトするビットを保存
 		int shiftBit= 0;
@@ -84,8 +85,8 @@ public class Ensyu7_12 {
 		int integerValue = 0;
 		//シフトさせる回数
 		int bitShift     = 0;
-		int resultValue = 0;
-			 
+		//結果を保存
+		int resultValue  = 0;
 		//標準入力の準備
 		Scanner standardInput = new Scanner(System.in);
 		//整数値の入力
@@ -107,10 +108,9 @@ public class Ensyu7_12 {
 		//bitShift分だけ回転させる
 		resultValue = rRotate(integerValue,bitShift);
 		//回転前を表示
-		System.out.println("右回転後の整数値:"+integerValue);
+		System.out.println("右回転後の整数値:"+resultValue);
 		//回転させた後の整数値を２進数表現
 		printBit(resultValue);	
-		
 		//区切りを表示
 		System.out.println("------------------------------");
 		//回転前を表示
