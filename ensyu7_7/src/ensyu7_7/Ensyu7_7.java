@@ -12,10 +12,12 @@ public class Ensyu7_7 {
 	 * 関数名：putStars
 	 * 概要  :引数で受け取った整数値分だけ*を表示
 	 * 引数  :int型　n　＊を表示する個数
+	 * 			教本の指定とおりの変数名としている
 	 * 戻り値:なし
 	 * 作成日:2023.04.18
 	 */
 	public static void putStars(int n){
+		//＊をｎ個表示するために呼び出す
 		putChars('*',n);
 	}
 	/*
@@ -23,6 +25,7 @@ public class Ensyu7_7 {
 	 * 概要  :１つの単語と整数値を受け取り、整数値分だけ単語を連続で表示
 	 * 引数  :char型：c 一文字
 	 *		　int型	：n 表示する個数
+	 *		教本の指定とおりの変数名としている
 	 * 戻り値:なし
 	 * 作成日:2023.04.18
 	 */
@@ -35,7 +38,7 @@ public class Ensyu7_7 {
 	}
 	/*
 	 * 関数名：main
-	 * 概要  :右下に直角がくるような直角三角形を＊で表示する
+	 * 概要  :左下に直角がくるような直角三角形を＊で表示する
 	 * 引数  :なし
 	 * 戻り値:なし
 	 * 作成日:2023.04.18
@@ -44,19 +47,19 @@ public class Ensyu7_7 {
 		//標準入力の準備
 		Scanner standardInput = new Scanner(System.in);
 		//プログラム説明
-		System.out.println("右下直角の三角形を表示します。");
+		System.out.println("左下直角の三角形を表示します。");
 		//段数保存
 		int numberOfStep = 0;
 		//最低段数
-		final int stepLimit = 1;
+		final int STEP_LIMIT = 1;
 		//入力が正しいか確認
 		do {
 			//段数入力を促す
 			System.out.print("段数は：");
 			//入力した値を受け取る
 			numberOfStep = standardInput.nextInt();
-		//stepLimitより小さい値は正しくない値、再入力
-		}while(numberOfStep<stepLimit);
+		//STEP_LIMITより小さい値は正しくない値、再入力
+		}while(numberOfStep<STEP_LIMIT);
 		//スペースと＊を表示するループ
 		for(int i=1; i<= numberOfStep; i++) {
 			//＊を表示
