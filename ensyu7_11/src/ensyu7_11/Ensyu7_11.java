@@ -16,13 +16,13 @@ public class Ensyu7_11 {
 	 */
 	public static void main(String[] args){
 		//整数値
-		int  integerValue     = 52;
+		int  integerValue     = 1;
 		//右シフトした結果を保存
 		int  rightShiftValue  = 0;
 		//左シフトした結果を保存
 		int  leftShiftValue   = 0;
 		//何回シフトするか
-		final int STEP_NUMBER = 3;
+		final int STEP_NUMBER = 31;
 		//割る数または掛ける数として利用
 		final int BIT_NUMBER = 2;
 		//右シフトさせて値を保存
