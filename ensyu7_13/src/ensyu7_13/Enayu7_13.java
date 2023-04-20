@@ -130,17 +130,15 @@ public class Enayu7_13 {
 	static int inverse(int x, int pos) {
 		//編集するバイナリーを用意する
 		int editBinary = x;
-		//０～posビットまで参照していく
-		for(int i=0; i<=pos; i++) {
-			//もし、ｘをiだけ右シフトして、その最下位ビットが１ならば、
-			if((x>>i & 1)==1) {
-				//最下位ビットを０にする
-				editBinary = reset(editBinary,i);
+		
+		//もし、ｘをiだけ右シフトして、その最下位ビットが１ならば、
+		if((x>>pos & 1)==1) {
+			//最下位ビットを０にする
+			editBinary = reset(editBinary,pos);
 			//その最下位ビットが０ならば、
-			}else {
-				//最下位ビットを１にする
-				editBinary = set(editBinary,i);
-			}
+		}else {
+			//最下位ビットを１にする
+			editBinary = set(editBinary,pos);
 		}
 		//結果を返す
 		return editBinary;
@@ -183,9 +181,9 @@ public class Enayu7_13 {
 		//入力された値を保存
 		int inputInteger = standardInput.nextInt();
 		//基準となるビット目を保存
-		int posBit = -1;
-		//入力された値が正の値となるようにする
-		final int positiveValue = 1;
+		int posBit = 0;
+		//入力された値が正の値、０となるようにする
+		final int positiveValue = 0;
 		//繰り返し
 		do {
 			//整数値入力
