@@ -20,7 +20,7 @@ public class Enayu7_13 {
 	 */
 	static void printBit(int x) {
 		//31からイテレーターを減らしていく
-		for(int i=31; i>=0; i--) {
+		for(int i=MAX_BIT_NUMBER-1; i>=0; i--) {
 			//ひとつひとつビットを表示
 			System.out.print(((x>>>i&1)==1)?'1':'0');
 		}
