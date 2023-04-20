@@ -20,10 +20,14 @@ public class Ensyu7_22 {
 	 * 作成日:2023.04.20
 	 */
 	static int[] arrayClone(int[] a) {
+		//配列を用意
 		int[] cloneArray = new int [a.length];
+		//配列aの長さ分だけループ
 		for(int i=0; i<a.length; i++) {
+			//配列aの値をコピー
 			cloneArray[i] = a[i];
 		}
+		//作成したクローンを返す
 		return cloneArray;
 	}
 	/*
@@ -85,7 +89,7 @@ public class Ensyu7_22 {
 	
 	/*
 	 * 関数名：main
-	 * 概要  :aryInsメソッドを実行するメソッド
+	 * 概要  :arrayCloneメソッドを実行するメソッド
 	 * 引数  :なし
 	 * 戻り値:なし
 	 * 作成日:2023.04.20
@@ -93,9 +97,11 @@ public class Ensyu7_22 {
 	public static void main(String[] args) {
 		//配列を用意
 		int[] firstArray = createArray("a");
-		
+		//クローンを作成
 		int[] testArray = arrayClone(firstArray);
+		//結果を表示
 		System.out.print("生成されたクローンは");
+		//クローンを作成した配列を表示
 		printArray(testArray);
 	}
 
