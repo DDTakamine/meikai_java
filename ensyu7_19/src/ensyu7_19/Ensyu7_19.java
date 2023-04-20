@@ -92,7 +92,7 @@ public class Ensyu7_19 {
 			//入力された数値を保存
 			removeElement = standardInput.nextInt();
 		//入力された値が０以上かチェック
-		}while(removeElement<REMOVED_MINIMAM_INDEX);
+		}while(removeElement<REMOVED_MINIMAM_INDEX || testArray.length < removeElement);
 		//繰り返し
 		do {
 			//削除個数を入力
@@ -100,7 +100,7 @@ public class Ensyu7_19 {
 			//入力された数値を保存
 			removeNumber = standardInput.nextInt();
 			//入力された値が０以上かチェック
-		}while(removeNumber<REMOVED_MINIMAM_INDEX);
+		}while(removeNumber<REMOVED_MINIMAM_INDEX || (testArray.length-removeElement) <= removeNumber);
 		//要素を削除した配列を受け取る
 		testArray = aryrmvN(testArray,removeElement,removeNumber);
 		//削除後の配列表示
