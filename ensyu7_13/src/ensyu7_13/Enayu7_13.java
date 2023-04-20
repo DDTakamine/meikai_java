@@ -8,6 +8,8 @@ import java.util.Scanner;
  * 作成日:2023/04/19
  */
 public class Enayu7_13 {
+	//int型は32ビット
+	static final int MAX_BIT_NUMBER = 32;
 	/*
 	 * 教本242ページのList7-13より引用
 	 * 関数名：printBit
@@ -38,8 +40,6 @@ public class Enayu7_13 {
 		int tailBit = 1;
 		//シフトするビットを保存
 		int shiftBit= 0;
-		//int型は32ビット
-		final int MAX_BIT_NUMBER = 32;
 		//後ろのｎビットを保存
 		tailBit = x<<(MAX_BIT_NUMBER-n);
 		//xの値をnだけ左シフトして、下位ｎビットに０を入れる
@@ -62,8 +62,6 @@ public class Enayu7_13 {
 		int headBit = 1;
 		//シフトするビットを保存
 		int shiftBit= 0;
-		//int型は32ビット
-		final int MAX_BIT_NUMBER = 32;
 		//先頭のｎビットを保存
 		headBit = x>>>(MAX_BIT_NUMBER-n);
 		//xの値をnだけ左シフトして、下位ｎビットに０を入れる
@@ -191,7 +189,7 @@ public class Enayu7_13 {
 			//ビット目を保存
 			posBit = standardInput.nextInt();
 		//入力が正の値となるまで繰り返す
-		}while(posBit<positiveValue);
+		}while(posBit<positiveValue || MAX_BIT_NUMBER<=posBit);
 		//setメソッド
 		System.out.println("～setメソッド～");
 		//結果表示
