@@ -29,7 +29,7 @@ public class Ensyu7_15 {
 	
 	/*
 	 * 関数名：main
-	 * 概要  :set,reset,inverseを表示していく
+	 * 概要  :配列の合計を求める
 	 * 引数  :なし
 	 * 戻り値:なし
 	 * 作成日:2023.04.19
@@ -37,10 +37,16 @@ public class Ensyu7_15 {
 	public static void main(String[] args) {
 		//標準入力の準備
 		Scanner standardInput = new Scanner(System.in);
-		//要素数入力
-		System.out.print("要素数：");
-		//入力された配列の値を保存
-		int arrayElement = standardInput.nextInt();
+		//配列の要素数
+		int arrayElement = 0;
+		//繰り返し
+		do {
+			//要素数入力
+			System.out.print("要素数：");
+			//入力された配列の値を保存
+			arrayElement = standardInput.nextInt();
+		//０より小さい場合は再入力
+		}while(arrayElement<0);
 		//配列を用意する
 		int[] argumentArray = new int [arrayElement];
 		//配列の要素を入力していく
