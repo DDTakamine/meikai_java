@@ -17,7 +17,7 @@ public class Ensyu7_16 {
 	 */
 	static int minOf(int[]a) {
 		//最小値を保存する変数
-		int minimamValue = 0;
+		int minimamValue = a[0];
 		//最小値を求めていく
 		for(int i=0;i<a.length;i++) {
 			//もし、最小値より小さな値が見つかったら、
