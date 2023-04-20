@@ -183,7 +183,7 @@ public class Enayu7_13 {
 		//入力された値を保存
 		int inputInteger = standardInput.nextInt();
 		//基準となるビット目を保存
-		int posBit = 0;
+		int posBit = -1;
 		//入力された値が正の値となるようにする
 		final int positiveValue = 1;
 		//繰り返し
