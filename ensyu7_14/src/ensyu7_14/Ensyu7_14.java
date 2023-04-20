@@ -213,6 +213,7 @@ public class Ensyu7_14 {
 		int posBit = 0;
 		//入力された値が正の値となるようにする
 		final int positiveValue = 0;
+		int changeNumber = 0;
 		//繰り返し
 		do {
 			//整数値入力
@@ -221,17 +222,25 @@ public class Ensyu7_14 {
 			posBit = standardInput.nextInt();
 		//入力が正の値となるまで繰り返す
 		}while(posBit<positiveValue);
+		//繰り返し
+		do {
+			//整数値入力
+			System.out.print("個数：");
+			//ビット目を保存
+			changeNumber = standardInput.nextInt();
+			//入力が正の値となるまで繰り返す
+		}while(changeNumber<positiveValue);
 		//setメソッド
 		System.out.println("～setNメソッド～");
 		//結果表示
-		printResult(inputInteger,setN(inputInteger,posBit,10));
+		printResult(inputInteger,setN(inputInteger,posBit,changeNumber));
 		//resetメソッド
 		System.out.println("～resetNメソッド～");
 		//結果表示
-		printResult(inputInteger,resetN(inputInteger,posBit,10));
+		printResult(inputInteger,resetN(inputInteger,posBit,changeNumber));
 		//setメソッド
 		System.out.println("～inverseNメソッド～");
 		//結果表示
-		printResult(inputInteger,inverseN(inputInteger,posBit,10));
+		printResult(inputInteger,inverseN(inputInteger,posBit,changeNumber));
 	}
 }
