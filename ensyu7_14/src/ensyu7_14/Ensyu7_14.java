@@ -212,7 +212,7 @@ public class Ensyu7_14 {
 		//基準となるビット目を保存
 		int posBit = 0;
 		//入力された値が正の値となるようにする
-		final int positiveValue = 1;
+		final int positiveValue = 0;
 		//繰り返し
 		do {
 			//整数値入力
