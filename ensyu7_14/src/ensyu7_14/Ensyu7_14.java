@@ -90,7 +90,7 @@ public class Ensyu7_14 {
 		final int ONE_STEP = 1;
 		//１となる変数
 		final int ACTIVE_BIT = 1;
-		//pos～Pos+nまで繰り返す
+		//pos～pos+nまで繰り返す
 		for(int i=pos; i<pos+N; i++) {
 			
 			//もし、最下位ビットが０ならば、
