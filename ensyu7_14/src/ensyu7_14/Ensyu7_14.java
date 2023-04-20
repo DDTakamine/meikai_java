@@ -229,7 +229,7 @@ public class Ensyu7_14 {
 			//ビット目を保存
 			changeNumber = standardInput.nextInt();
 			//入力が正の値となるまで繰り返す
-		}while(changeNumber<positiveValue);
+		}while(changeNumber<positiveValue || MAX_BIT_NUMBER-posBit < changeNumber);
 		//setメソッド
 		System.out.println("～setNメソッド～");
 		//結果表示
@@ -238,7 +238,7 @@ public class Ensyu7_14 {
 		System.out.println("～resetNメソッド～");
 		//結果表示
 		printResult(inputInteger,resetN(inputInteger,posBit,changeNumber));
-		//setメソッド
+		//inverseメソッド
 		System.out.println("～inverseNメソッド～");
 		//結果表示
 		printResult(inputInteger,inverseN(inputInteger,posBit,changeNumber));
