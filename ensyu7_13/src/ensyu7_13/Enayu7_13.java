@@ -107,9 +107,9 @@ public class Enayu7_13 {
 	static int reset(int x, int pos) {
 		//posビット目を最下位ビットになるように右回転をした
 		int editBinary = rRotate(x,pos);
-		//もし、最下位ビットが０ならば、
+		//もし、最下位ビットが1ならば、
 		if((editBinary&1) != 0) {
-			//１を加える
+			//１をひく
 			editBinary -= 1;
 		}
 		//右回転したので、左回転してもとに戻す
@@ -148,7 +148,7 @@ public class Enayu7_13 {
 	/*
 	 * 
 	 * 関数名：printResult
-	 * 概要  :値の変化前と後の様子を表示
+	 * 概要  :値の変化前と後の様子を表示（バイナリー形式表示）
 	 * 引数  :int型　beforeInteger 
 	 * 				 afterInteger  
 	 * 戻り値:void
