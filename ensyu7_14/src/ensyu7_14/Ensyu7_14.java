@@ -8,6 +8,8 @@ import java.util.Scanner;
 * 作成日:2023/04/19
 */
 public class Ensyu7_14 {
+	//int型は32ビット
+	static final int MAX_BIT_NUMBER = 32;
 	/*
 	 * 教本242ページのList7-13より引用
 	 * 関数名：printBit
@@ -18,7 +20,7 @@ public class Ensyu7_14 {
 	 */
 	static void printBit(int x) {
 		//31からイテレーターを減らしていく
-		for(int i=31; i>=0; i--) {
+		for(int i=MAX_BIT_NUMBER-1; i>=0; i--) {
 			//ひとつひとつビットを表示
 			System.out.print(((x>>>i&1)==1)?'1':'0');
 		}
@@ -38,8 +40,6 @@ public class Ensyu7_14 {
 		int tailBit = 1;
 		//シフトするビットを保存
 		int shiftBit= 0;
-		//int型は32ビット
-		final int MAX_BIT_NUMBER = 32;
 		//後ろのｎビットを保存
 		tailBit = x<<(MAX_BIT_NUMBER-n);
 		//xの値をnだけ左シフトして、下位ｎビットに０を入れる
@@ -62,8 +62,6 @@ public class Ensyu7_14 {
 		int headBit = 1;
 		//シフトするビットを保存
 		int shiftBit= 0;
-		//int型は32ビット
-		final int MAX_BIT_NUMBER = 32;
 		//先頭のｎビットを保存
 		headBit = x>>>(MAX_BIT_NUMBER-n);
 		//xの値をnだけ左シフトして、下位ｎビットに０を入れる
@@ -84,7 +82,7 @@ public class Ensyu7_14 {
 	 * 作成日:2023.04.19
 	 */
 	static int setN(int x, int pos, int N) {
-		//posビットが最下位ビットになるように初期化
+		//pos-1ビットが最下位ビットになるように初期化
 		int editBinary = rRotate(x,pos);
 		//１ステップずつ
 		final int ONE_STEP = 1;
@@ -125,13 +123,14 @@ public class Ensyu7_14 {
 		final int ACTIVE_BIT = 1;
 		//pos～Pos+nまで繰り返す
 		for(int i=pos; i<pos+N; i++) {
-			//１つずつ右回転
-			editBinary = rRotate(editBinary,ONE_STEP);
+			
 			//もし、最下位ビットが１ならば、
 			if((editBinary&ACTIVE_BIT) == 1) {
 				//１を引く
 				editBinary -= ACTIVE_BIT;
 			}
+			//１つずつ右回転
+			editBinary = rRotate(editBinary,ONE_STEP);
 		}
 		//右回転したので、左回転してもとに戻す
 		int resultValue = lRotate(editBinary,pos+N);
@@ -154,7 +153,8 @@ public class Ensyu7_14 {
 		//1bit
 		final int ONE_BIT = 1;
 		//pos～pos+Nビットまで参照していく
-		for(int i=pos; i<=pos+N; i++) {
+		for(int i=pos; i<pos+N; i++) {
+			
 			//もし、ｘをiだけ右シフトして、その最下位ビットが１ならば、
 			if((x>>i & ONE_BIT)==ONE_BIT) {
 				//０にする
@@ -168,7 +168,7 @@ public class Ensyu7_14 {
 			editBinary = rRotate(editBinary,ONE_BIT);
 		}
 		//右回転したので、左回転してもとに戻す
-		int resultValue = lRotate(editBinary,pos+N+1);
+		int resultValue = lRotate(editBinary,pos+N);
 		//結果を返す
 		return resultValue;
 	}
@@ -221,7 +221,7 @@ public class Ensyu7_14 {
 			//ビット目を保存
 			posBit = standardInput.nextInt();
 		//入力が正の値となるまで繰り返す
-		}while(posBit<positiveValue);
+		}while(posBit<positiveValue || MAX_BIT_NUMBER<=posBit);
 		//繰り返し
 		do {
 			//整数値入力
