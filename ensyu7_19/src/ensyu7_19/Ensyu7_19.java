@@ -92,7 +92,7 @@ public class Ensyu7_19 {
 			//入力された数値を保存
 			removeElement = standardInput.nextInt();
 		//入力された値が０以上かチェック
-		}while(removeElement<REMOVED_MINIMAM_INDEX || testArray.length < removeElement);
+		}while(removeElement<REMOVED_MINIMAM_INDEX || testArray.length-1 < removeElement);
 		//繰り返し
 		do {
 			//削除個数を入力
