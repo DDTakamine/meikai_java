@@ -213,6 +213,7 @@ public class Ensyu7_14 {
 		int posBit = 0;
 		//入力された値が正の値となるようにする
 		final int positiveValue = 0;
+		//変更を加える個数
 		int changeNumber = 0;
 		//繰り返し
 		do {
