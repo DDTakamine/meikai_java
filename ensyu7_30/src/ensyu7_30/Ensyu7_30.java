@@ -2,8 +2,8 @@ package ensyu7_30;
 //標準入力の準備
 import java.util.Scanner;
 /*
-* クラス名:ensyu7_27
-* 概要  :演習7-27
+* クラス名:ensyu7_30
+* 概要  :演習7-30
 * 作成者:R.Akamine
 * 作成日:2023/04/21
 */
@@ -32,8 +32,6 @@ public class Ensyu7_30 {
 		//temporaryValueを返す
 		return temporaryValue;
 	}
-	
-
 	/*関数名・引数名は教本に従う
 	 * 関数名 :min
 	 * 概要   :３つのint型の最小値を求める
