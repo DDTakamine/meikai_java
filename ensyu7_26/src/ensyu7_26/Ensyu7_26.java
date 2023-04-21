@@ -133,7 +133,7 @@ public class Ensyu7_26 {
 			//入力された値を保存
 			insertIndex = standardInput.nextInt();
 		//削除する要素番号が０よりも小さくならない　または　testArrayの要素数を越えない
-		}while(insertIndex<0 || testArray.length<insertIndex);
+		}while(insertIndex<0 || testArray.length-1<insertIndex);
 		//arraRmvOfメゾットを実行
 		testArray = arrayInsOf(testArray,insertIndex,insertValue);
 		//配列の要素を表示
