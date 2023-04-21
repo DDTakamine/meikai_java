@@ -120,7 +120,7 @@ public class Ensyu7_24 {
 			//入力された値を保存
 			deleteIndex = standardInput.nextInt();
 		//削除する要素番号が０よりも小さくならない　または　testArrayの要素数を越えない
-		}while(deleteIndex<0 || testArray.length<deleteIndex);
+		}while(deleteIndex<0 || testArray.length-1<deleteIndex);
 		//arraRmvOfメゾットを実行
 		testArray = arrayRmvOf(testArray,deleteIndex);
 		//配列の要素を表示
