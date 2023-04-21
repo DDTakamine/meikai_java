@@ -24,23 +24,26 @@ public class Ensyu7_27 {
 	 * 作成日:2023.04.21
 	 */
 	static boolean addMatrix(int[][] x,int[][] y, int[][] z) {
+		//真偽値を初期化
+		boolean trueOrFalse = true; 
 		//もし、それぞれの行数が等しい場合、
 		if(x.length==y.length && y.length==z.length && z.length==x.length) {
 			//列数を調べる為のループ
 			for(int i=0; i<x.length; i++) {
 				//列数が等しい場合、
 				if(x[i].length==y[i].length && y[i].length==z[i].length && z[i].length == x[i].length) {
-					//何もしない
+					//trueを格納
+					trueOrFalse = true;
 				//列数が等しくない場合、
 				}else{
 					//falseを返す
-					return false;
+					trueOrFalse = false;
 				}
 			}
 		//行数が一致しない場合、
 		}else {
 			//falseを返す
-			return false;
+			trueOrFalse = false;
 		}
 		//行に関するループ
 		for(int i=0;i<x.length;i++) {
@@ -50,8 +53,8 @@ public class Ensyu7_27 {
 				z[i][j] = x[i][j] + y[i][j];
 			}
 		}
-		//trueを返す
-		return true;
+		//returnする
+		return trueOrFalse;
 	}
 	
 	/*関数名・引数名は教本に従う
@@ -88,10 +91,6 @@ public class Ensyu7_27 {
 		int[][] secondMatrix = { {6, 3, 4} , {5, 1, 2} };
 		//配列を初期化
 		int[][] thirdMatrix = new int[2][3];
-		//addMatrixから返ってきた真偽値を格納
-		boolean trueOrFalse;
-		//配列要素の和をもとめる
-		trueOrFalse = addMatrix(firstMatrix,secondMatrix,thirdMatrix);
 		//行列aの表示を知らせる
 		System.out.println("行列a");
 		//行列aの表示
@@ -101,7 +100,7 @@ public class Ensyu7_27 {
 		//行列b表示
 		printMatrix(secondMatrix);
 		//addMatrixの返り値がtrueの場合
-		if(trueOrFalse == true) {
+		if(addMatrix(firstMatrix,secondMatrix,thirdMatrix)) {
 			//行列cの表示を知らせる
 			System.out.println("行列c");
 			//行列cの表示
