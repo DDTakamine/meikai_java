@@ -124,7 +124,7 @@ public class Ensyu7_25 {
 			//入力された値を保存
 			deleteIndex = standardInput.nextInt();
 		//削除する要素番号が０よりも小さくならない　または　testArrayの要素数を越えない
-		}while(deleteIndex<ARRAY_MINIMUM_ELEMENT || testArray.length<deleteIndex);
+		}while(deleteIndex<ARRAY_MINIMUM_ELEMENT || testArray.length<=deleteIndex);
 		//繰り返し
 		do {
 			//削除する要素番号入力を促す
@@ -133,7 +133,7 @@ public class Ensyu7_25 {
 			deleteNumber = standardInput.nextInt();
 		//０よりも小さい値が入力される　または　
 		//削除する番号を指定した時に削除できる個数を越えた時は再入力
-		}while(deleteIndex<ARRAY_MINIMUM_ELEMENT || testArray.length-deleteIndex<deleteNumber);
+		}while(deleteNumber<ARRAY_MINIMUM_ELEMENT || testArray.length-deleteIndex<deleteNumber);
 		
 		//arraRmvOfメゾットを実行
 		testArray = arrayRmvOf(testArray,deleteIndex,deleteNumber);
