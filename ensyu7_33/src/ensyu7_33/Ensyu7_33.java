@@ -11,6 +11,34 @@ public class Ensyu7_33 {
 	//標準入力の準備
 	static Scanner standardInput = new Scanner(System.in);
 	/*関数名・引数名は教本に従う
+	 * 関数名 :searchDigit
+	 * 概要   :桁数を調べる
+	 * 引数   :int型　integerValue
+	 * 返り値 :int型　digitCount
+	 * 作成日:2023.04.24
+	 */
+	static int searchDigit(int integerValue) {
+		//桁数カウント変数
+		int digitCount = 0;
+		//１０を格納
+		int tenDigit = 10;
+		//負の時は
+		if(integerValue<0) {
+			//桁数を一つ増やす
+			digitCount++;
+		}
+		//tenDigitで割ると０以外の間まわる
+		while(integerValue/tenDigit != 0) {
+			//桁数を一つ増やす
+			digitCount++;
+			//桁数を一つ減らす
+			integerValue /= tenDigit;
+		}
+		//桁数を返す
+		return digitCount;
+	}
+	
+	/*関数名・引数名は教本に従う
 	 * 関数名 :printArray
 	 * 概要   :１次元配列を表示（各要素の間には１文字分のスペースを空けること）
 	 * 引数   :int型　１次元配列　a
@@ -40,22 +68,13 @@ public class Ensyu7_33 {
 		int maximumDigit = 0;
 		//一度桁数を保存
 		int saveDigit = 0;
-		//１０で割っていく処理で使用
-		int  divitionTen = 10;
+
 		
 		//行を参照するループ
 		for(int i=0; i<a.length; i++) {
 			//列を参照する
 			for(int j=0;j<a[i].length;j++) {
-				//１０に戻す
-				divitionTen = 10;saveDigit = 0;
-				//divitionTenで割って、０でない間繰り返す
-				while(a[i][j]%divitionTen != 0) {
-					//saveDigitに１加える
-					saveDigit++;
-					//10×
-					divitionTen *=10;
-				}
+				saveDigit = searchDigit(a[i][j]);
 				//saveDigitの方が大きい場合
 				if(maximumDigit<saveDigit) {
 					//値をコピー
@@ -68,22 +87,15 @@ public class Ensyu7_33 {
 		for(int i=0; i<a.length; i++) {
 			//列を参照する
 			for(int j=0;j<a[i].length;j++) {
-				//１０に戻す
-				divitionTen = 10;
-				//divitionTenで割って、０でない間繰り返す
-				while(a[i][j]%divitionTen != 0) {
-					//saveDigitに１加える
-					saveDigit++;
-					//10×
-					divitionTen *=10;
-				}
-				//数値を一つ表示して、タブを表示
-				System.out.print(a[i][j]+"\t");
-				//
-				for(int k=0; k<maximumDigit-saveDigit;k++) {
+				//数値を表示
+				System.out.print(a[i][j]);
+				//桁数を調べて
+				saveDigit = searchDigit(a[i][j]);
+				//最大桁数からa[i][j]の桁数を引いた分だけスペースを表示
+				for(int k=0; k<=maximumDigit-saveDigit;k++) {
+					//スペースを表示
 					System.out.print(" ");
 				}
-				
 			}
 			//１行表示が終わったら改行を表示
 			System.out.println();
@@ -165,8 +177,17 @@ public class Ensyu7_33 {
 		//作成した配列を返す
 		return returnArray;
 	}	
+	/*
+	 * 関数名 :main
+	 * 概要   :printArrayを実行する
+	 * 引数   :なし
+	 * 返り値 :なし
+	 * 作成日:2023.04.24
+	 */
 	public static void main(String[] args) {
+		//一次元の配列を渡して、実行
 		printArray(makeLinearArray());
+		//２次元配列を渡して実行
 		printArray(makeMultiArray());
 		
 		
