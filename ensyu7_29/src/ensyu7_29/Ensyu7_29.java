@@ -21,7 +21,21 @@ public class Ensyu7_29 {
 	 * 作成日:2023.04.21
 	 */
 	static int[][] aryClone2(int[][]a){
-		return a;
+		//返却用配列を作成
+		int[][] returnArray = new int [a.length][];
+		//行操作ループ
+		for(int i=0; i<a.length; i++) {
+			//列要素決定
+			returnArray[i] = new int [a[i].length];
+			//列操作ループ
+			for(int j=0;j<a[i].length; j++) {
+				//値をコピー
+				returnArray[i][j] = a[i][j];
+			}
+		}
+		//作成した配列を返す
+		return returnArray;
+		
 	}
 	
 	/*関数名・引数名は教本に従う
