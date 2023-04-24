@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class Ensyu7_33 {
 	//標準入力の準備
 	static Scanner standardInput = new Scanner(System.in);
-	/*関数名・引数名は教本に従う
+	/*
 	 * 関数名 :searchDigit
 	 * 概要   :桁数を調べる
 	 * 引数   :int型　integerValue
@@ -26,6 +26,7 @@ public class Ensyu7_33 {
 		if(integerValue<0) {
 			//桁数を一つ増やす
 			digitCount++;
+			integerValue = (-1)*integerValue; 
 		}
 		//tenDigitで割ると０以外の間まわる
 		while(integerValue/tenDigit != 0) {
@@ -64,25 +65,30 @@ public class Ensyu7_33 {
 	 * 作成日:2023.04.21
 	 */
 	static void printArray(int[][] a) {
-		//最大桁数
-		int maximumDigit = 0;
-		//一度桁数を保存
-		int saveDigit = 0;
-
-		
-		//行を参照するループ
-		for(int i=0; i<a.length; i++) {
-			//列を参照する
-			for(int j=0;j<a[i].length;j++) {
-				saveDigit = searchDigit(a[i][j]);
-				//saveDigitの方が大きい場合
-				if(maximumDigit<saveDigit) {
-					//値をコピー
-					maximumDigit = saveDigit;
-				}
+		int temporaryMaxinum = 0;
+		for(int i=0;i<a.length; i++) {
+			if(temporaryMaxinum<a[i].length) {
+				temporaryMaxinum = a[i].length;
 			}
 		}
 		
+		//最大桁数
+		int[] maximumDigit = new int[temporaryMaxinum];
+		//一度桁数を保存
+		int saveDigit = 0;
+		//列参照変数
+		int columnControl = 0;
+		
+		for(int i=0; i<a.length; i++) {
+			for(int j=0;j<a[i].length; j++) {
+				if(j <= a[i].length) {
+					saveDigit = searchDigit(a[i][j]);
+					if(maximumDigit[i]<saveDigit) {
+						maximumDigit[i] = saveDigit;
+					}
+				}
+			}
+		}
 		//行を参照するループ
 		for(int i=0; i<a.length; i++) {
 			//列を参照する
@@ -92,7 +98,7 @@ public class Ensyu7_33 {
 				//桁数を調べて
 				saveDigit = searchDigit(a[i][j]);
 				//最大桁数からa[i][j]の桁数を引いた分だけスペースを表示
-				for(int k=0; k<=maximumDigit-saveDigit;k++) {
+				for(int k=0; k<=maximumDigit[i]-saveDigit;k++) {
 					//スペースを表示
 					System.out.print(" ");
 				}
