@@ -58,14 +58,19 @@ public class Ensyu7_30 {
 	}
 	/*関数名・引数名は教本に従う
 	 * 関数名 :min
-	 * 概要   :int型の最小値を求める
+	 * 概要   :int型配列の最小値を求める
 	 * 引数   :int型　a
-	 * 返り値 :int型　a
+	 * 返り値 :int型　teporaryValue
 	 * 作成日:2023.04.21
 	 */
-	static int min(int a) {
+	static int min(int a[]) {
 		//一時保存用変数
-		int temporaryValue = a;
+		int temporaryValue = a[0];
+		for(int i=0;i<a.length;i++) {
+			if(temporaryValue>a[i]) {
+				temporaryValue = a[i];
+			}
+		}
 		//temporaryValueを返す
 		return temporaryValue;
 	}
@@ -83,12 +88,14 @@ public class Ensyu7_30 {
 		int secondValue = -3;
 		//３つ目の変数
 		int thirdValue = 238;
+		//配列を用意
+		int[] arrayValue = {32,-9,0,32,4,-53};
 		//引数が２つのメソッドの表示
 		System.out.println("min(a,b) = "+ min(firstValue,secondValue));
 		//引数が３つのメソッドの表示
 		System.out.println("min(a,b,c) = "+ min(firstValue,secondValue,thirdValue));
 		//引数が１つのメソッドの表示
-		System.out.println("min(a) = "+ min(firstValue));
+		System.out.println("min(a) = "+ min(arrayValue));
 	}
 
 }
