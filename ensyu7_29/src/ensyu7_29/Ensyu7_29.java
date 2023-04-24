@@ -53,6 +53,8 @@ public class Ensyu7_29 {
 	public static void main(String[] args) {
 		//配列を初期化
 		int[][] firstMatrix = { {9, 3, 3} , {4, 5, 6} };
+		//配列を初期化
+		int[][] secondMatrix = { {9, 3, 3} , {4, 5, 6} };
 		//クローン作成前の表示
 		System.out.println("オリジナル");
 		//行列を表示
@@ -60,7 +62,9 @@ public class Ensyu7_29 {
 		//クローン作成後の表示
 		System.out.println("クローン");
 		//行列を表示
-		printMatrix(aryClone2(firstMatrix));
+		secondMatrix = aryClone2(firstMatrix);
+		secondMatrix[1][2] = 999;
+		printMatrix(firstMatrix);
 		
 		
 	}
