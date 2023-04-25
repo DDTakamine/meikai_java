@@ -17,7 +17,7 @@ public class TestCar {
 	public static void main(String[] args) {
 		//インスタンス化
 		Car anpanman = new Car("anpanmango",500,3000,5000,0.0,0.0
-				,300.0,300.0,"1234",24.14);
+				,300.0,300.0,1234,24.14);
 		
 		
 		

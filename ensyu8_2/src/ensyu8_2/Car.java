@@ -30,7 +30,7 @@ class Car {
 	
 	//車のコンストラクト
 	Car(String name,int width,int height,int length,double x,double y,
-			double fuel,double maximumFuel,String carNumber,double fuelConsumption){
+			double fuel,double maximumFuel,int carNumber,double fuelConsumption){
 		//名前
 		this.name=name;
 		//車幅
@@ -43,6 +43,8 @@ class Car {
 		this.fuel=fuel;
 		//最大燃料量
 		this.maximumFuel=maximumFuel;
+		//車の番号
+		this.carNumber = carNumber;
 		//燃費
 		this.fuelConsumption=fuelConsumption;
 		//座標
@@ -103,6 +105,8 @@ class Car {
 		System.out.println("車長："+length+"mm");
 		//最大燃料量の表示
 		System.out.println("最大燃料量："+maximumFuel+"L");
+		//車番号の表示
+		System.out.println("車の番号:"+carNumber);
 	}
 	
 	/*メソッド名・変数名は教本に従う
