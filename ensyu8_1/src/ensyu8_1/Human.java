@@ -1,4 +1,6 @@
 package ensyu8_1;
+//標準入力の準備
+import java.util.Scanner;
 
 /*フィールド名・クラス名は教本に従う
  * クラス名:ensyu8_1
@@ -7,6 +9,8 @@ package ensyu8_1;
  * 作成日:2023.04.25
  */
 class Human {
+	//標準入力の準備
+	static Scanner standardInput = new Scanner(System.in);
 	//名前のフィールド
 	private String name    ; 
 	//身長のフィールド
@@ -17,10 +21,10 @@ class Human {
 	private String birthDay  ;
 	//住所のフィールド
 	private String address;
-	//人間のコンストラクト
+	//人間のコンストラクタ
 	Human(String name,float height,float weight,String birthDay,String address){
 		//名前
-		this.name=name;	  
+		this.name=name;	
 		//身長
 		this.height=height; 
 		//体重
@@ -67,6 +71,18 @@ class Human {
 		return weight;
 	}
 	/*
+	 * 関数名：getaddress
+	 * 概要  :住所を取得
+	 * 引数  :なし
+	 * 戻り値 :String address　住所
+	 * 作成者:R.Akamine
+	 * 作成日:2023.04.25
+	 */
+	String getAddress(){
+		//住所を返す
+		return address;
+	}
+	/*
 	 * 関数名：calculateBMI
 	 * 概要  :BMIを計算
 	 * 引数  :なし
@@ -75,8 +91,9 @@ class Human {
 	 * 作成日:2023.04.25
 	 */
 	double calculateBMI(){
+		final int TRANCERATE_METER=100;
 		//BMIを計算して表示
-		return weight/(height*height);
+		return (weight*TRANCERATE_METER*TRANCERATE_METER)/(height*height);
 	}
 	/*
 	 * 関数名：putSpec
@@ -94,7 +111,13 @@ class Human {
 		//体重を表示
 		System.out.println("体重："+weight+"kg");
 		//住所を表記
-		System.out.println("住所："+	address);
+		System.out.println("住所："+address);
+	}
+	void reregistrationAddress() {
+		//文字列を受け取る
+		address = standardInput.nextLine();
+		//再登録した内容を表示
+		System.out.println("住所として"+address+"を登録します");
 	}
 }
 

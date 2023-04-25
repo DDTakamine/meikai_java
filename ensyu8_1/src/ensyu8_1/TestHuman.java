@@ -1,5 +1,4 @@
 package ensyu8_1;
-
 /*フィールド名・クラス名は教本に従う
  * クラス名:ensyu8_1
  * 概要  :演習8-1クラス
@@ -7,7 +6,6 @@ package ensyu8_1;
  * 作成日:2023.04.25
  */
 public class TestHuman {
-	
 	/*
 	 * 関数名：main
 	 * 概要  :Humanクラスが正しく動くかどうかチェック
@@ -26,8 +24,18 @@ public class TestHuman {
 		//ゲッタ確認
 		System.out.println("名前："+Akamine.getName());
 		//ゲッタ確認
-		System.out.println("体重："+Akamine.getHeight());
+		System.out.println("体重："+Akamine.getWeight());
 		//calculateBMIが正しく動くか確認
-		System.out.printf("BMI: %.5f \n",Akamine.calculateBMI());
+		System.out.printf("BMI: %.3f \n",Akamine.calculateBMI());
+		//住所の表示
+		System.out.println(Akamine.getAddress());
+		//再登録を促す
+		System.out.print("住所の再登録：");
+		//住所を再登録
+		Akamine.reregistrationAddress();
+		//登録後確認
+		System.out.print("再登録確認用：");
+		//住所の表示
+		System.out.println(Akamine.getAddress());
 	}
 }
