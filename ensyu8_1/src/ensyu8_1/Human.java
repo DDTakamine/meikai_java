@@ -91,6 +91,7 @@ class Human {
 	 * 作成日:2023.04.25
 	 */
 	double calculateBMI(){
+		//百分率にする処理
 		final int TRANCERATE_METER=100;
 		//BMIを計算して表示
 		return (weight*TRANCERATE_METER*TRANCERATE_METER)/(height*height);
@@ -112,7 +113,17 @@ class Human {
 		System.out.println("体重："+weight+"kg");
 		//住所を表記
 		System.out.println("住所："+address);
+		//生年月日を表記
+		System.out.println("生年月日："+address);
 	}
+	/*
+	 * 関数名：reregistrationAddress
+	 * 概要  :住所を再登録
+	 * 引数  :なし
+	 * 戻り値 :なし
+	 * 作成者:R.Akamine
+	 * 作成日:2023.04.25
+	 */
 	void reregistrationAddress() {
 		//文字列を受け取る
 		address = standardInput.nextLine();
