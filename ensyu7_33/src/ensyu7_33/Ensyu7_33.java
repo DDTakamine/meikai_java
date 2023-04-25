@@ -19,26 +19,56 @@ public class Ensyu7_33 {
 	 */
 	static int searchDigit(int integerValue) {
 		//桁数カウント変数
-		int digitCount = 0;
+		int digitCount = 1;
 		//１０を格納
 		int tenDigit = 10;
 		//負の時は
-		if(integerValue<0) {
+		if(integerValue<=0) {
 			//桁数を一つ増やす
-			digitCount++;
+			digitCount += 1;
 			integerValue = (-1)*integerValue; 
 		}
 		//tenDigitで割ると０以外の間まわる
-		while(integerValue/tenDigit != 0) {
+		while(integerValue > 0) {
 			//桁数を一つ増やす
 			digitCount++;
 			//桁数を一つ減らす
-			integerValue /= tenDigit;
+			integerValue = integerValue/tenDigit;
 		}
 		//桁数を返す
 		return digitCount;
 	}
+	/*
+	 * 関数名 :columnAccess
+	 * 概要   :２次元配列で列ごとに（縦に）参照していき、桁数が大きい整数値を返す
+	 * 			もし、その行に要素がなければ、次の行
+	 * 引数   :int型　２次元配列　testArrray
+	 * 		　 int型　列数　　　　columnNumber
+	 * 返り値 :int型　最大桁数
+	 * 作成日:2023.04.24
+	 */
 	
+	static int columnAccess(int[][] testArray, int columnNumber){
+		//列の中で最大桁数を格納
+		int maxmumDigit = -1;
+		//一時的に保存用
+		int temporaryMaximum = 0;
+		//列に対するループ
+		for(int i=0;i<testArray.length; i++) {
+			//columnNumberがもし、行の要素数以下ならば、
+			if(columnNumber<testArray[i].length) {
+				//桁数を求めて格納
+				temporaryMaximum = searchDigit(testArray[i][columnNumber]);
+				//もし、maxmumDigitよりも一時的に値を保存している場合、
+				if(maxmumDigit<temporaryMaximum) {
+					//値をコピー
+					maxmumDigit = temporaryMaximum;
+				}
+			}
+		}
+		//最大桁数を返す
+		return maxmumDigit;
+	}
 	/*関数名・引数名は教本に従う
 	 * 関数名 :printArray
 	 * 概要   :１次元配列を表示（各要素の間には１文字分のスペースを空けること）
@@ -55,57 +85,30 @@ public class Ensyu7_33 {
 		//改行を表示
 		System.out.println();
 	}
-	
-	
 	/*関数名・引数名は教本に従う
 	 * 関数名 :printArray
 	 * 概要   :２次元配列を表示（各列の数字の先頭が揃うように最低限スペースを空ける）
 	 * 引数   :int型　２次元配列　a
 	 * 返り値 :なし
-	 * 作成日:2023.04.21
+	 * 作成日:2023.04.25
 	 */
 	static void printArray(int[][] a) {
-		int temporaryMaxinum = 0;
-		for(int i=0;i<a.length; i++) {
-			if(temporaryMaxinum<a[i].length) {
-				temporaryMaxinum = a[i].length;
-			}
-		}
-		
-		//最大桁数
-		int[] maximumDigit = new int[temporaryMaxinum];
-		//一度桁数を保存
-		int saveDigit = 0;
-		//列参照変数
-		int columnControl = 0;
-		
+		//数値とスペースを表示するループ
 		for(int i=0; i<a.length; i++) {
-			for(int j=0;j<a[i].length; j++) {
-				if(j <= a[i].length) {
-					saveDigit = searchDigit(a[i][j]);
-					if(maximumDigit[i]<saveDigit) {
-						maximumDigit[i] = saveDigit;
-					}
-				}
-			}
-		}
-		//行を参照するループ
-		for(int i=0; i<a.length; i++) {
-			//列を参照する
-			for(int j=0;j<a[i].length;j++) {
+			//列操作に対するループ
+			for(int j=0; j<a[i].length; j++) {
 				//数値を表示
 				System.out.print(a[i][j]);
-				//桁数を調べて
-				saveDigit = searchDigit(a[i][j]);
-				//最大桁数からa[i][j]の桁数を引いた分だけスペースを表示
-				for(int k=0; k<=maximumDigit[i]-saveDigit;k++) {
+				//スペースを表示する回数分だけループ
+				for(int k=0; k<=(columnAccess(a,j)-searchDigit(a[i][j]));k++) {
 					//スペースを表示
 					System.out.print(" ");
 				}
 			}
-			//１行表示が終わったら改行を表示
+			//改行
 			System.out.println();
 		}
+		
 	}
 	/*
 	 * 関数名 :makeLinearArray
@@ -139,7 +142,7 @@ public class Ensyu7_33 {
 	}
 	
 	/*
-	 * 関数名 :makeArray
+	 * 関数名 :makeMultiArray
 	 * 概要   :1次元配列を作成
 	 * 引数   :int型　aarayElement 作成する配列の要素数
 	 * 返り値 :int型　配列　returnArray
