@@ -62,7 +62,7 @@ class Human {
 	 * 作成者:R.Akamine
 	 * 作成日:2023.04.25
 	 */
-	float getweight(){
+	float getWeight(){
 		//体重を返す
 		return weight;
 	}
@@ -76,7 +76,7 @@ class Human {
 	 */
 	double calculateBMI(){
 		//BMIを計算して表示
-		return weight/(height)*(height);
+		return weight/(height*height);
 	}
 	/*
 	 * 関数名：putSpec
