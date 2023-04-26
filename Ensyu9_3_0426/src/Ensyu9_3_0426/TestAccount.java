@@ -16,30 +16,33 @@ public class TestAccount {
 	 */
 	public static void main(String[] args) {
 		//Accountを作成
-		Account Akamine = new Account("赤嶺亮介","123-456","2023/04/26",1000000000);
+		Account Akamine = new Account("赤嶺亮介","123-456",new Day(2023,04,26),1000000000);
 		//名前だけ渡す
 		System.out.println("Account(String name)");
 		//Account型をインスタンス化
 		Account firthAccount = new Account(Akamine.getName());
 		//アカウント情報を表示
 		printAccount(firthAccount);
-
+		//見た目整える
+		System.out.println("=====================================");
 		//名前・口座番号を渡す
-		System.out.println("Account(String name)");
+		System.out.println("Account(String name,String no)");
 		//Account型をインスタンス化
 		Account secondAccount = new Account(Akamine.getName(),Akamine.getNo());
 		//アカウント情報を表示
 		printAccount(secondAccount);
-		
+		//見た目整える
+		System.out.println("=====================================");
 		//名前・口座番号を渡す
-		System.out.println("Account(String name)");
+		System.out.println("Account(String name,String no)");
 		//Account型をインスタンス化
 		Account thirdAccount = new Account(Akamine.getName(),Akamine.getNo(),Akamine.getOpenDay());
 		//アカウント情報を表示
 		printAccount(thirdAccount);
-		
+		//見た目整える
+		System.out.println("=====================================");
 		//名前・口座番号を渡す
-		System.out.println("Account(String name)");
+		System.out.println("Account(String name,String no,Day openDay,long balance)");
 		//Account型をインスタンス化
 		Account forthAccount = new Account(Akamine.getName(),Akamine.getNo(),Akamine.getOpenDay(),Akamine.getBalance());
 		//アカウント情報を表示

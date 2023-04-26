@@ -7,7 +7,7 @@ public class Account {	//名前をスペースで初期化
 	//口座残高
 	private long balance = 0;
 	//口座開設日 yyyy.mm.ddで初期化
-	private String openDay = "yyyy.mm.dd";
+	private Day openDay   ;
 	//nameだけコンストラクタとする
 	public Account(String name) {
 		//nameを入力
@@ -21,14 +21,14 @@ public class Account {	//名前をスペースで初期化
 		this.no = no;
 	}
 	//name,no,openDayコンストラクタとする
-	public Account(String name,String no,String openDay) {
+	public Account(String name,String no,Day openDay) {
 		//name,noを入力
 		this(name,no);
 		//口座開設日を入力
-		this.openDay = openDay;
+		this.openDay = new Day(openDay.getYear(),openDay.getMonth(),openDay.getDay());
 	}
 	//name,no,openDay,balanceコンストラクタとする
-		public Account(String name,String no,String openDay,long balance) {
+		public Account(String name,String no,Day openDay,long balance) {
 		//name,no,openDayを入力
 		this(name,no,openDay);
 		//口座残高を入力
@@ -66,7 +66,7 @@ public class Account {	//名前をスペースで初期化
 	 * 作成者:R.Akamine
 	 * 作成日:2023.04.26
 	 */
-	String getOpenDay() {
+	Day getOpenDay() {
 		//口座開設日を返す
 		return openDay;
 	}
