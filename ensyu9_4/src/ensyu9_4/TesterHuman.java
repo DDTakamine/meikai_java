@@ -1,4 +1,6 @@
 package ensyu9_4;
+//標準入力
+import java.util.Scanner;
 /*フィールド名・クラス名は教本に従う
  * クラス名:ensyu9_4
  * 概要  :演習9-4クラス
@@ -15,8 +17,41 @@ public class TesterHuman {
 	 * 作成日:2023.04.27
 	 */
 	public static void main(String[] args) {
+		//誕生日を格納する
+		Day personBirthDay = new Day();
+		//一時的に年を保存
+		int temporaryYear = 0;
+		//一時的に月を保存
+		int temporaryMonth = 0;
+		//一時的に日を保存
+		int temporaryDay = 0;
+		//標準入力の準備
+		Scanner standardInput = new Scanner(System.in);
+		
+		//繰り返し
+		do {
+			//年の入力
+			System.out.println("年：");
+			//年の標準入力
+			temporaryYear = standardInput.nextInt();
+			//月の入力
+			System.out.println("月：");
+			//月の標準入力
+			temporaryMonth = standardInput.nextInt();
+			//日の入力
+			System.out.println("日：");
+			//日の標準入力
+			temporaryDay = standardInput.nextInt();
+			//入力した値をpersonBirthDayに格納
+			personBirthDay.setYear(temporaryYear);
+			//入力した値をpersonBirthDayに格納
+			personBirthDay.setMonth(temporaryMonth);
+			//入力した値をpersonBirthDayに格納
+			personBirthDay.setDate(temporaryDay);
+		//入力が正しいか確認
+		}while(personBirthDay.checkDate() != true);
 		//クラスをインスタンス化
-		Human Akamine = new Human("赤嶺亮介",170.0f,60.0f,new Day(1992,02,29),"東京都");
+		Human Akamine = new Human("赤嶺亮介",170.0f,60.0f,personBirthDay,"東京都");
 		//スペック表示
 		Akamine.putSpec();
 		//区切りを表示

@@ -180,4 +180,122 @@ public class Day {
 		return String.format("%04d年%02d月%02d日(%s)"
 				,year,month,date,wd[dayOfWeek()]);
 	}
+	/*
+	 * 関数名：checkDate
+	 * 概要  : 1,3,5,7,8,10,12月は１～３１日の入力になっているか？
+	 * 　　　　4,6,9,11月は１～３０日の入力になっているか？
+	 * 　　　　2月はうるう年ならば１～２８日の入力になっているか？
+	 * 　　　　　　　平年ならば１～２７日の入力になっているか？
+	 * 　　　　を確認する
+	 * 引数  :なし
+	 * 戻り値 :boolean型　入力が正しいとtrue、正しくない場合はfalseを返す
+	 * 作成者:R.Akamine
+	 * 作成日:2023.04.26
+	 */
+	public boolean checkDate() {
+		//真偽値を格納
+		boolean trueOrFalse = true;
+		//もし、1,3,5,7,8,10,12月ならば、
+		if(month==1 || month==3 || month==5 || month==7 || month==8 || month==10 || month==12) {
+			//１～３１日の入力かどうか
+			if(1<=date && date<=31) {
+				//正しい入力
+				trueOrFalse = true;
+			//１～３１日の入力になっていない
+			}else {
+				//正しくない入力
+				trueOrFalse = false;
+			}
+		//もし、4,6,9,11月ならば、
+		}else if(month==4 || month==6 || month==9 || month==11) {
+			//１～３１日の入力かどうか
+			if(1<=date && date<=30) {
+				//正しい入力
+				trueOrFalse = true;
+			//１～３１日の入力になっていない
+			}else {
+				//正しくない入力
+				trueOrFalse = false;
+			}
+		//もし、2月ならば、
+		}else if(month == 2) {
+			//うるう年ならば、
+			if(isLeapYear(year)) {
+				//１～２９日の入力になっていたら、
+				if(1<=date && date<=29) {
+					//正しい入力
+					trueOrFalse = true;
+				//１～２９日の入力になっていなかったら、
+				}else {
+					//正しくない入力
+					trueOrFalse = false;
+				}
+			//うるう年ではないならば、
+			}else {
+				//１～２８日の入力になっていたら、
+				if(1<=date && date<=28) {
+					//正しい入力
+					trueOrFalse = true;
+				//１～２８日の入力になっていなかったら、
+				}else {
+					//正しくない入力
+					trueOrFalse = false;
+				}
+			}
+		//月の入力が１～１２月以外になっていたら
+		}else {
+			//正しくない入力
+			trueOrFalse = false;
+		}
+	//そもそも、yearが負だったら、
+	if(year<0) {
+		//正しくない入力
+		trueOrFalse = false;
+	}
+	//返り値
+	return trueOrFalse;
+	}
+	/*
+	 * 関数名：isLeapYear
+	 * 概要  :うるう年かどうか判定
+	 * 引数  :int型 西暦
+	 * 戻り値 :Boolean型　true・うるう年　false・平年
+	 * 作成者:R.Akamine
+	 * 作成日:2023.04.27
+	 */
+	public boolean isLeapYear(int inputYear) {
+		//１基準
+		final int FIRST_BASE = 4;
+		//２基準
+		final int SECOND_BASE = 100;
+		//３基準
+		final int THIRD_BASE = 400;
+		//返り値格納用
+		boolean trueOrFalse = false;
+		//FIRST_BASEで割れるなら
+		if(inputYear%FIRST_BASE == 0) {
+			//SECOND_BASEで割れるなら
+			if(inputYear%SECOND_BASE == 0) {
+				//THIRD_BASEで割れるなら
+				if(inputYear%THIRD_BASE == 0) {
+					//うるう年である
+					trueOrFalse = true;
+				//THIRD_BASEで割れないなら
+				}else {
+					//平年である
+					trueOrFalse = false;
+				}
+			//SECOND_BASEで割れないなら
+			}else {
+				//うるう年である
+				trueOrFalse = true;
+			}
+		//FIRST_BASEで割れないなら
+		}else{
+			//平年です
+			trueOrFalse = false;
+		}
+		//返り値を返す
+		return trueOrFalse;
+	}
 }

@@ -161,6 +161,7 @@ public class Human {
 	 * 作成日:2023.04.27
 	 */
 	public String toString() {
+		//文字列を返す
 		return String.format("◆%s \n 身長：%.2f 体重：%.2f \n 生年月日：%s \n 住所：%s", 
 						name,height,weight,birthDay,address);
 	}
