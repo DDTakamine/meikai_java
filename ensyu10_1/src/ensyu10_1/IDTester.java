@@ -8,10 +8,11 @@ package ensyu10_1;
 class Id {
 	//カウント
 	static int counter = 0;
-	
+	//id保持用変数
 	private int id;
 	//-- コンストラクタ --//
 	public Id() {
+		//カウンタ変数を増やして、idに格納
 		id = ++counter;
 	}
 	/*メソッド名・変数名は教本に従う
@@ -39,19 +40,19 @@ class Id {
 	}
 }
 /*フィールド名・クラス名は教本に従う
- * クラス名:Day
+ * クラス名:IDTester
  * 概要  :演習9-5クラス
  * 作成者:R.Akamine
  * 作成日:2023.04.27
  */
 public class IDTester {
 	/*メソッド名・変数名は教本に従う
-	 * 関数名：getYear
-	 * 概要  :年を取得
+	 * 関数名：main
+	 * 概要  :クラス変数とインスタンス変数での値保持の違いを検証
 	 * 引数  :なし
-	 * 戻り値 :Day year
+	 * 戻り値 :なし
 	 * 作成者:R.Akamine
-	 * 作成日:2023.04.26
+	 * 作成日:2023.04.28
 	 */
 	public static void main(String[] args) {
 		//インスタンス化
